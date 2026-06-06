@@ -1,6 +1,7 @@
 import React from 'react'
 import plaster from '../assets/plaster.jpg';
 import { motion} from 'framer-motion';
+import styles from '../styles/Home.module.css';
 import CarouselComponent from '../components/CarouselComponent';
 
 const Home = () => {
@@ -42,7 +43,8 @@ const Home = () => {
                         background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%)',
                         display: 'flex',
                         alignItems: 'center',
-                        transformOrigin: 'top'
+                        transformOrigin: 'top',
+                        padding: '0 0.75rem'
                     }}
                 >
                     <motion.div
@@ -58,19 +60,19 @@ const Home = () => {
                             background: '#fff'
                         }}
                     />
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gridTemplateRows: 'repeat(9, 1fr)', placeContent: 'center', width: '100%', height: '100%', color: '#fff', textAlign: 'center' }}>
-                        <div style={{ gridArea: '4 / 1 / span 3 / -1'}}>
+                    <div className={styles.HomeGrid}>
+                        <div>
                             <motion.h1
                                 variants={text}
                                 initial='hidden'
                                 animate='show'
                                 transition={{ duration: 1, delay: 1.7, ease: 'easeInOut' }}
-                                style={{ fontSize: '5rem' }}
+                                style={{ fontSize: 'clamp(3.5rem, 2.955rem + 2.73vw, 5rem)' }}
                             >
                                 Augustus Finishing Co.
                             </motion.h1>
                         </div>
-                        <div style={{ position: 'relative', fontSize: '1.5rem', gridArea: '8 / 1 / span 1 / 1' }}>
+                        <div>
                             <motion.p
                                 variants={text}
                                 initial='hidden'
@@ -83,18 +85,11 @@ const Home = () => {
                                 initial={{ scaleY: 0 }}
                                 animate={{ scaleY: 1 }}
                                 transition={{ duration: 1, ease: 'easeInOut', delay: 3 }}
-                                style={{
-                                    position: 'absolute',
-                                    top: 0,
-                                    right: 0,
-                                    width: '2px',
-                                    height: '100%',
-                                    background: '#fff',
-                                    transformOrigin: 'center'
-                                }}
+                                className={styles.VerticalLine}
+                                style={{right: 0}}
                             />
                         </div>
-                        <div style={{ fontSize: '1.5rem', fontWeight: 700, gridArea: '8 / 2 / span 1 / 2' }}>
+                        <div>
                             <motion.p
                                 variants={text}
                                 initial='hidden'
@@ -104,20 +99,13 @@ const Home = () => {
                                 Tiling
                             </motion.p>
                         </div>
-                        <div style={{ position: 'relative', fontSize: '1.5rem', gridArea: '8 / 3 / span 1 / -1' }}>
+                        <div>
                             <motion.div
                                 initial={{ scaleY: 0 }}
                                 animate={{ scaleY: 1 }}
                                 transition={{ duration: 1, ease: 'easeInOut', delay: 3 }}
-                                style={{
-                                    position: 'absolute',
-                                    left: 0,
-                                    top: 0,
-                                    width: '2px',
-                                    height: '100%',
-                                    background: '#fff',
-                                    transformOrigin: 'center'
-                                }}
+                                className={styles.VerticalLine}
+                                style={{ left: 0}}
                             />
                             <motion.p
                                 variants={text}
