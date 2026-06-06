@@ -1,6 +1,7 @@
 import React from 'react'
 import plaster from '../assets/plaster.jpg';
 import { motion} from 'framer-motion';
+import CarouselComponent from '../components/CarouselComponent';
 
 const Home = () => {
 
@@ -23,17 +24,13 @@ const Home = () => {
   return (
         <div>
             <motion.div
-                style={{ height: "100vh" }}
+                style={{ height: "100vh", display: 'flex', overflow: 'hidden' }}
                 variants={container}
                 initial='hidden'
                 animate='show'
                 transition={{ duration: 1, ease: 'easeInOut' }}
             >
-                <img
-                    src={plaster}
-                    alt="image of a plastered wall"
-                    style={{ height: "100%", width: "100%", objectFit: 'cover' }}
-                />
+                <CarouselComponent />
                 <motion.div
                     variants={overlay}
                     initial='hidden'
@@ -42,7 +39,7 @@ const Home = () => {
                     style={{
                         position: 'absolute',
                         inset: 0,
-                        background: 'rgba(0, 0, 0, 0.4)',
+                        background: 'linear-gradient(180deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%)',
                         display: 'flex',
                         alignItems: 'center',
                         transformOrigin: 'top'
@@ -97,7 +94,7 @@ const Home = () => {
                                 }}
                             />
                         </div>
-                        <div style={{ fontSize: '1.5rem', gridArea: '8 / 2 / span 1 / 2' }}>
+                        <div style={{ fontSize: '1.5rem', fontWeight: 700, gridArea: '8 / 2 / span 1 / 2' }}>
                             <motion.p
                                 variants={text}
                                 initial='hidden'
