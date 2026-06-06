@@ -36,7 +36,7 @@ const Home = () => {
                     variants={overlay}
                     initial='hidden'
                     animate='show'
-                    transition={{ duration: 0.6, delay: 1, ease: 'easeInOut' }}
+                    transition={{ duration: 1, delay: 1, ease: 'easeInOut' }}
                     style={{
                         position: 'absolute',
                         inset: 0,
@@ -50,12 +50,12 @@ const Home = () => {
                     <motion.div
                         initial={{ opacity: 1 }}
                         animate={{ opacity: 0 }}
-                        transition={{ duration: 1, delay: 2, ease: 'easeInOut' }}
+                        transition={{ duration: 1, delay: 2.6, ease: 'easeInOut' }}
                         style={{
                             position: 'absolute',
                             bottom: 0,
                             left: 0,
-                            height: '10px',
+                            height: '2px',
                             width: '100%',
                             background: '#fff'
                         }}
@@ -66,7 +66,7 @@ const Home = () => {
                                 variants={text}
                                 initial='hidden'
                                 animate='show'
-                                transition={{ duration: 1, delay: 1.7, ease: 'easeInOut' }}
+                                transition={{ duration: 1, delay: 2, ease: 'easeInOut' }}
                                 style={{ fontSize: 'clamp(3.5rem, 2.955rem + 2.73vw, 5rem)' }}
                             >
                                 Augustus Finishing Co.
@@ -77,14 +77,14 @@ const Home = () => {
                                 variants={text}
                                 initial='hidden'
                                 animate='show'
-                                transition={{ duration: 1, delay: 2, ease: 'easeInOut' }}
+                                transition={{ duration: 1, delay: 2.7, ease: 'easeInOut' }}
                             >
                                 Plastering
                             </motion.p>
                             <motion.div
                                 initial={{ scaleY: 0 }}
                                 animate={{ scaleY: 1 }}
-                                transition={{ duration: 1, ease: 'easeInOut', delay: 3 }}
+                                transition={{ duration: 1, ease: 'easeInOut', delay: 3.7 }}
                                 className={styles.VerticalLine}
                                 style={{right: 0}}
                             />
@@ -94,7 +94,7 @@ const Home = () => {
                                 variants={text}
                                 initial='hidden'
                                 animate='show'
-                                transition={{ duration: 1, delay: 2, ease: 'easeInOut' }}
+                                transition={{ duration: 1, delay: 2.7, ease: 'easeInOut' }}
                             >
                                 Tiling
                             </motion.p>
@@ -103,7 +103,7 @@ const Home = () => {
                             <motion.div
                                 initial={{ scaleY: 0 }}
                                 animate={{ scaleY: 1 }}
-                                transition={{ duration: 1, ease: 'easeInOut', delay: 3 }}
+                                transition={{ duration: 1, ease: 'easeInOut', delay: 3.7 }}
                                 className={styles.VerticalLine}
                                 style={{ left: 0}}
                             />
@@ -111,7 +111,7 @@ const Home = () => {
                                 variants={text}
                                 initial='hidden'
                                 animate='show'
-                                transition={{ duration: 1, delay: 2, ease: 'easeInOut' }}
+                                transition={{ duration: 1, delay: 2.7, ease: 'easeInOut' }}
                             >
                                 Painting
                             </motion.p>

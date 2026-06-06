@@ -31,12 +31,18 @@ const CarouselComponent = () => {
     })
 
     // fade IN new image
-    incomingAnim.start({
-      opacity: 1,
-      filter: 'blur(0px)',
-      scale: 1,
-      transition: { duration: 1.2, ease: 'easeInOut' }
-    })
+      incomingAnim.start({
+          opacity: 1,
+          filter: 'blur(0px)',
+          scale: 1,
+          transition: { duration: 1.2, ease: 'easeInOut' }
+      }).then(() => {
+          // start Ken Burns zoom AFTER fade-in
+          incomingAnim.start({
+              scale: 1.1,
+              transition: { duration: 10, ease: 'linear' }
+          })
+      })
 
     // fade OUT old image
     outgoingAnim.start({
