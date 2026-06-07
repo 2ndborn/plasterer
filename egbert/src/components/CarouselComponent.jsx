@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
-import plaster from '../assets/plaster.jpg'
-import painting from '../assets/painting.webp'
-import tile from '../assets/tile.jpg'
+import plaster from '../assets/plaster.jpg';
+import painting from '../assets/painting.webp';
+import tile from '../assets/tile.jpg';
 
 const CarouselComponent = () => {
   const images = [plaster, painting, tile]

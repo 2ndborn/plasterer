@@ -1,5 +1,4 @@
-import React from 'react'
-import plaster from '../assets/plaster.jpg';
+import React from 'react';
 import { motion} from 'framer-motion';
 import styles from '../styles/Home.module.css';
 import CarouselComponent from '../components/CarouselComponent';
