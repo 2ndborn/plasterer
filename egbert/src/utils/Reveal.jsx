@@ -25,7 +25,7 @@ const Reveal = ({ children, origin, overlayColor }) => {
         second: {
             background: overlayColor,
             transition: {
-                duration: 0.8, ease: 'easeOut'
+                duration: 1, ease: 'easeOut'
             }
         }
     }
@@ -34,7 +34,7 @@ const Reveal = ({ children, origin, overlayColor }) => {
         hidden: { opacity: 0, y: 10 },
         show: {
             opacity: 1, y: 0,
-            transition: { duration: 0.8, delay: 0.4, ease: 'easeIn' }
+            transition: { duration: 0.8, delay: 0.5, ease: 'easeIn' }
         }
     }
     return (
@@ -47,7 +47,7 @@ const Reveal = ({ children, origin, overlayColor }) => {
                     position: 'absolute',
                     inset: 0,
                     transformOrigin: origin,
-                    background: '#292828',
+                    background: '#464D5D',
                     zIndex: -1
                 }}
             />
