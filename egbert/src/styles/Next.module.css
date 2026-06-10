@@ -7,6 +7,28 @@
     gap: 20px;
 }
 
+.InnerNext {
+    position: relative;
+    place-content: center;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 7.5px;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+
+.InnerNext::after {
+    content: attr(data-name);
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    font-size: 2rem;
+    padding: 0.5rem 0.75rem;
+}
+
 @media (max-width: 769px) {
     .NextGrid {
         grid-template-columns: 1fr;

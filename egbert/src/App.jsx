@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import NavBar from './components/NavBar'
 import About from './pages/About'
 import Services from './pages/Services'
+import Next from './pages/Next'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       <Home />
       <About />
       <Services />
+      <Next />
     </>
   )
 }
