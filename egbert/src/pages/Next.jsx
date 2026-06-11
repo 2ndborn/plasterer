@@ -53,7 +53,7 @@ const Next = () => {
                             }}
                         >
                             <div data-name={step.id} className={styles.InnerNext}>
-                                <div style={{fontSize: '3rem', margin: '1.5rem 0'}}>{step.icon}</div>
+                                <div style={{fontSize: '3rem', margin: '1.5rem  0'}}>{step.icon}</div>
                                 {step.id === 1 ? (
                                     <button 
                                         style={{
@@ -67,7 +67,7 @@ const Next = () => {
                                             border: 'none',
                                             boxShadow: '0px 3px 6px rgba(255, 255, 255, 0.6)',
                                             cursor: 'pointer',
-                                            margin: '2rem 0'
+                                            marginBottom: '1.5rem'
                                         }}
                                     >
                                         Contact me

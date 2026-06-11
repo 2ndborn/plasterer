@@ -5,6 +5,7 @@ import NavBar from './components/NavBar'
 import About from './pages/About'
 import Services from './pages/Services'
 import Next from './pages/Next'
+import BackToTop from './components/BackToTop'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Services />
       <Next />
+      <BackToTop />
     </>
   )
 }

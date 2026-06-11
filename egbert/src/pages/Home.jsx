@@ -22,7 +22,7 @@ const Home = () => {
     }
 
   return (
-        <div>
+        <div id='top'>
             <motion.div
                 style={{ height: "100vh", display: 'flex', overflow: 'hidden' }}
                 variants={container}
