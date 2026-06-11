@@ -23,6 +23,9 @@ const Services = () => {
         <div style={{
             position: 'relative',
             minHeight: '75vh',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
             padding: '2rem',
             textAlign: 'center',
             fontSize: '1.5rem'
@@ -62,24 +65,25 @@ const Services = () => {
                                 position: 'absolute',
                                 inset: 0,
                                 background: 'rgba(0, 0, 0, 0.2)',
-                                alignContent: 'flex-end',
                                 padding: '1rem',
-                                
+                                display: 'grid',
+                                gridTemplateRows: 'repeat(4, 1fr)',
                                 }}
                             >
-                                <div style={{ height: "150px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                                <div style={{gridRow: 'span 3', placeContent: 'center' }}>
                                 {isHoverIndex === i && (
                                 <motion.h5
                                     variants={heading}
                                     initial='hidden'
                                     animate='show'
                                     transition={{duration: 0.6, ease: 'easeInOut'}}
-                                   style={{color: '#fff', margin: 0, lineHeight: '1.4'}} 
+                                   style={{color: '#fff', marginTop: '5rem', lineHeight: '1.4'}} 
                                 >
                                     Click below to see the {ser.button.toLowerCase()} gallery
                                 </motion.h5>
                                 )}
                                 </div>
+                                <div style={{gridRow: 'span 2', place: 'center'}}>
                                 <motion.button
                                 style={{
                                     minWidth: '150px',
@@ -91,13 +95,14 @@ const Services = () => {
                                     fontWeight: 525,
                                     border: 'none',
                                     boxShadow: '0px 3px 6px rgba(255, 255, 255, 0.6)',
-                                    marginBottom: '2rem',
+                                    // marginBottom: '2rem',
                                     cursor: 'pointer'
                                 }}
                                 whileHover={{border: '2px solid #fff'}}
                                 >
                                     {ser.button}
                                 </motion.button>
+                                </div>
                             </motion.div>
                         </motion.div>
                     ))}

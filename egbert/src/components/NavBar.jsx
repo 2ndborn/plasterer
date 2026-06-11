@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import {degrees, easeIn, motion} from 'framer-motion';
+import { motion} from 'framer-motion';
 import styles from '../styles/NavBar.module.css';
+import NavItems from './NavItems';
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -79,17 +80,25 @@ const NavBar = () => {
             position: 'fixed',
             top: -150,
             right: -150,
+            display: 'flex',
+            justifyContent: 'start',
+            alignItems: 'center',
             height: 500,
             width: 500,
             color: 'white',
-            background: 'black',
+            background: '#2e333e',
             borderRadius: 1000,
             transformOrigin: 'top right',
             zIndex: 99
         }}
-        >
-            NavBar
-        </motion.div>
+          >
+            <NavItems isOpen={isOpen} />
+              {/* <div className={styles.radialMenu}>
+                  <div className={styles.item} style={{ '--angle': 90 }}>Home</div>
+                  <div className={styles.item} style={{ '--angle': 65 }}>Services</div>
+                  <div className={styles.item} style={{ '--angle': 36 }}>Gallery</div>
+              </div> */}
+          </motion.div>
     </>
   )
 }

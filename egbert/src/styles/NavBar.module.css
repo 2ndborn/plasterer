@@ -7,3 +7,21 @@
     border-radius: 10px;
     transition: 0.7s;
 }
+
+.radialMenu {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:
+    rotate(calc(var(--angle) * 1deg))
+    translateY(180px)
+    rotate(calc(var(--angle) * -1deg));
+  font-size: 1.5rem;
+  color: white;
+}

@@ -13,10 +13,10 @@ const About = () => {
         alignItems: 'center',
     }}
     >
-        <Reveal origin='left' overlayColor='rgba(0, 0, 0, 0.1)'>
+        <Reveal origin='left' overlayColor='#fff'>
             <div style={{
                   fontSize: '1.5rem',
-                  color: '#585555',
+                  color: '#fff',
                   textAlign: 'center'
               }}>
                   <div
@@ -24,7 +24,7 @@ const About = () => {
                       padding: '1rem',
                       borderRadius: '20px',
                       boxShadow: '2px 2px 4px rgba(0, 0, 0, 0.2), -2px 1px 4px rgba(0, 0, 0, 0.2)',
-                      background: 'rgba(0, 0, 0, 0.1)'
+                      background: '#464D5D'
                     }}
                     >
                       <h2>About me</h2>
