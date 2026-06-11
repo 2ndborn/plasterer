@@ -1,0 +1,53 @@
+import React, { useState } from 'react'
+import { FaChevronLeft } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
+
+const TilingImg = () => {
+    const [index, setIndex] = useState(0);
+
+    const images = [1, 2, 3];
+    
+    const handleRight = () => {
+        setIndex(prev => (prev + 1) % images.length)
+    }
+
+    const handleLeft = () => {
+        setIndex(prev => (prev - 1 + images.length) % images.length)
+    }
+
+    return (
+        <div style={{
+            position: 'relative',
+            width: '100%',
+            height: '100%',
+            background: 'white',
+            border: '2px solid #fff',
+        }}>
+            <h1>{images[index]}</h1>
+            <button
+                onClick={handleLeft}
+                style={{
+                    position: 'absolute',
+                    left: 10,
+                    top: '50%',
+                    paddingTop: 5
+                }}
+            >
+                <FaChevronLeft />
+            </button>
+            <button
+            onClick={handleRight}
+                style={{
+                    position: 'absolute',
+                    right: 10,
+                    top: '50%',
+                    paddingTop: 5
+                }}
+            >
+                <FaChevronRight />
+            </button>
+        </div>
+    )
+}
+
+export default TilingImg

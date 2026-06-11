@@ -10,6 +10,9 @@ import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 import Overlay from '../utils/Overlay';
 import PlasteringImg from '../components/PlasteringImg';
+import TilingImg from '../components/TilingImg';
+import PaintImg from '../components/PaintImg';
+
 
 const Services = () => {
     const [isHoverIndex, setIsHoverIndex] = useState(null);
@@ -128,8 +131,8 @@ const Services = () => {
             {istoggled && (
                 <Overlay key={istoggled} id={String(istoggled)} onClose={handleClose}>
                     {istoggled === 1 && (<PlasteringImg />)}
-                    {istoggled === 2 && (<div>2</div>)}
-                    {istoggled === 3 && (<div>3</div>)}
+                    {istoggled === 2 && (<TilingImg />)}
+                    {istoggled === 3 && (<PaintImg />)}
                 </Overlay>
             )}
             // above had a bug that crash before I left the handleLeft as a prop after id moved it.
