@@ -5,10 +5,21 @@ import plaster from '../assets/plaster.jpg';
 import painting from '../assets/painting.webp';
 import tile from '../assets/tile.jpg';
 import Reveal from '../utils/Reveal';
-import { main } from 'motion/react-client';
+import { IoClose } from "react-icons/io5";
+import { FaChevronLeft } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 
 const Services = () => {
-    const [isHoverIndex, setIsHoverIndex] = useState(null)
+    const [isHoverIndex, setIsHoverIndex] = useState(null);
+    const [istoggled, setIsToggled] = useState(null);
+
+    const handleOpen = () => {
+        setIsToggled(1)
+    }
+
+    const handleClose = () => {
+        setIsToggled(null)
+    }
 
     const heading = {
         hidden: {opacity: 0, y: 20},
@@ -85,6 +96,7 @@ const Services = () => {
                                 </div>
                                 <div style={{gridRow: 'span 2', place: 'center'}}>
                                 <motion.button
+                                onClick={handleOpen}
                                 style={{
                                     minWidth: '150px',
                                     padding: '0.75rem',
@@ -95,7 +107,6 @@ const Services = () => {
                                     fontWeight: 525,
                                     border: 'none',
                                     boxShadow: '0px 3px 6px rgba(255, 255, 255, 0.6)',
-                                    // marginBottom: '2rem',
                                     cursor: 'pointer'
                                 }}
                                 whileHover={{border: '2px solid #fff'}}
@@ -108,6 +119,71 @@ const Services = () => {
                     ))}
                 </div>
             </div>
+            {istoggled && (
+                <div style={{
+                    position: 'fixed',
+                    inset: 0,
+                    height: '100%',
+                    width: '100%',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    padding: '5rem 5rem',
+                    boxSizing: 'border-box'
+                }}
+                    >
+                    <div style={{
+                        position: 'absolute',
+                        inset: 0,
+                        backdropFilter: 'blur(25px)',
+                        zIndex: 0
+                    }} />
+                    <button 
+                    onClick={handleClose}
+                    style={{
+                        position: 'absolute',
+                        right: 10,
+                        top: 10,
+                        fontSize: '2rem',
+                        background: 'transparent',
+                        border: 'none',
+                        zIndex: 9999999,
+                        cursor: 'pointer'
+                        }}
+                    >
+                        <IoClose />
+                    </button>
+                    <img src='' alt
+                    style={{
+                        position: 'relative',
+                        width: '100%',
+                        height: '100%',
+                        background: 'black',
+                        border: '2px solid #fff'
+                    }}
+                    />
+                            <button
+                            style={{
+                            position: 'absolute',
+                            left: 68,
+                            top: '50%',
+                            paddingTop: 5
+                        }}
+                            >
+                                <FaChevronLeft />
+                            </button>
+                            <button
+                            style={{
+                            position: 'absolute',
+                            right: 68,
+                            top: '50%',
+                            paddingTop: 5
+                        }}
+                            >
+                                <FaChevronRight />
+                            </button>
+                </div>
+            )}
             </Reveal>
         </div>
     )

@@ -52,7 +52,7 @@ const NavBar = () => {
             right: 10,
             height: '30px',
             width: '40px',
-            zIndex: 100,
+            zIndex: -1,
             cursor: 'pointer'
         }}
         >
