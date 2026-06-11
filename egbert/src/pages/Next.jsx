@@ -26,7 +26,7 @@ const Next = () => {
             fontSize: '1.5rem'
         }}
         >
-            <Reveal origin='left' overlayColor='#fff'>
+            <Reveal origin='left'>
             <div
                 style={{
                     padding: '1.5rem',

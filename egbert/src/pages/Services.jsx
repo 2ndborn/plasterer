@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {motion} from 'framer-motion';
+import {AnimatePresence, LayoutGroup, motion} from 'framer-motion';
 import styles from '../styles/Services.module.css';
 import plaster from '../assets/plaster.jpg';
 import painting from '../assets/painting.webp';
@@ -8,13 +8,15 @@ import Reveal from '../utils/Reveal';
 import { IoClose } from "react-icons/io5";
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
+import Overlay from '../utils/Overlay';
+import PlasteringImg from '../components/PlasteringImg';
 
 const Services = () => {
     const [isHoverIndex, setIsHoverIndex] = useState(null);
     const [istoggled, setIsToggled] = useState(null);
 
-    const handleOpen = () => {
-        setIsToggled(1)
+    const handleOpen = (id) => {
+        setIsToggled(id)
     }
 
     const handleClose = () => {
@@ -26,9 +28,9 @@ const Services = () => {
         show: {opacity: 1, y: 0}
     }
     const service = [
-        {image: plaster, alt: 'Plastered room', button: 'Plastering', },
-        {image: tile, alt: 'Tiling room', button: 'Tiling'},
-        {image: painting, alt: 'Paint & Decorated reoom', button: 'Paint & Decorating'},
+        {id: 1, image: plaster, alt: 'Plastered room', button: 'Plastering', },
+        {id: 2, image: tile, alt: 'Tiling room', button: 'Tiling'},
+        {id: 3, image: painting, alt: 'Paint & Decorated reoom', button: 'Paint & Decorating'},
     ]
     return (
         <div style={{
@@ -42,7 +44,8 @@ const Services = () => {
             fontSize: '1.5rem'
         }}
         >
-            <Reveal origin='right' overlayColor='#fff'>
+            <LayoutGroup>
+            <Reveal origin='right'>
             <div
                 style={{
                     padding: '1.5rem',
@@ -56,9 +59,10 @@ const Services = () => {
                     <h2 style={{color: '#fff', margin: '0 0 1.5rem 0'}}>Services</h2>
                 </div>
                 <div className={styles.SerGrid}>
+                    <AnimatePresence mode='wait'>
                     {service.map((ser, i) => (
                         <motion.div
-                            key={i}
+                            key={ser.id}
                             onMouseEnter={() => setIsHoverIndex(i)}
                             onMouseLeave={() => setIsHoverIndex(null)}
                             style={{
@@ -96,7 +100,7 @@ const Services = () => {
                                 </div>
                                 <div style={{gridRow: 'span 2', place: 'center'}}>
                                 <motion.button
-                                onClick={handleOpen}
+                                onClick={() => handleOpen(ser.id)}
                                 style={{
                                     minWidth: '150px',
                                     padding: '0.75rem',
@@ -117,74 +121,21 @@ const Services = () => {
                             </motion.div>
                         </motion.div>
                     ))}
+                    </AnimatePresence>
                 </div>
             </div>
+            <AnimatePresence mode='wait'>
             {istoggled && (
-                <div style={{
-                    position: 'fixed',
-                    inset: 0,
-                    height: '100%',
-                    width: '100%',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    padding: '5rem 5rem',
-                    boxSizing: 'border-box'
-                }}
-                    >
-                    <div style={{
-                        position: 'absolute',
-                        inset: 0,
-                        backdropFilter: 'blur(25px)',
-                        zIndex: 0
-                    }} />
-                    <button 
-                    onClick={handleClose}
-                    style={{
-                        position: 'absolute',
-                        right: 10,
-                        top: 10,
-                        fontSize: '2rem',
-                        background: 'transparent',
-                        border: 'none',
-                        zIndex: 9999999,
-                        cursor: 'pointer'
-                        }}
-                    >
-                        <IoClose />
-                    </button>
-                    <img src='' alt
-                    style={{
-                        position: 'relative',
-                        width: '100%',
-                        height: '100%',
-                        background: 'black',
-                        border: '2px solid #fff'
-                    }}
-                    />
-                            <button
-                            style={{
-                            position: 'absolute',
-                            left: 68,
-                            top: '50%',
-                            paddingTop: 5
-                        }}
-                            >
-                                <FaChevronLeft />
-                            </button>
-                            <button
-                            style={{
-                            position: 'absolute',
-                            right: 68,
-                            top: '50%',
-                            paddingTop: 5
-                        }}
-                            >
-                                <FaChevronRight />
-                            </button>
-                </div>
+                <Overlay key={istoggled} id={String(istoggled)} onClose={handleClose}>
+                    {istoggled === 1 && (<PlasteringImg />)}
+                    {istoggled === 2 && (<div>2</div>)}
+                    {istoggled === 3 && (<div>3</div>)}
+                </Overlay>
             )}
+            // above had a bug that crash before I left the handleLeft as a prop after id moved it.
+            </AnimatePresence>
             </Reveal>
+            </LayoutGroup>
         </div>
     )
 }

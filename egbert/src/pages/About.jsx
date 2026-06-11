@@ -13,7 +13,7 @@ const About = () => {
         alignItems: 'center',
     }}
     >
-        <Reveal origin='left' overlayColor='#fff'>
+        <Reveal origin='left'>
             <div style={{
                   fontSize: '1.5rem',
                   color: '#fff',

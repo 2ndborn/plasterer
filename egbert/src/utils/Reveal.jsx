@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, useAnimation, useInView } from 'framer-motion'
 
-const Reveal = ({ children, origin, overlayColor }) => {
+const Reveal = ({ children, origin }) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, amount: 0.3 });
     const mainControls = useAnimation();
@@ -23,7 +23,7 @@ const Reveal = ({ children, origin, overlayColor }) => {
             transition: { duration: 0.4, ease: 'easeIn' }
         },
         second: {
-            background: overlayColor,
+            background: '#e8e8e8',
             transition: {
                 duration: 1, ease: 'easeOut'
             }
