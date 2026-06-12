@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion} from 'framer-motion';
 import styles from '../styles/NavBar.module.css';
+import { useScrollToSection } from '../hooks/useScrollToSection';
 
 const NavItems = ({isOpen}) => {
+    const scrollTo = useScrollToSection();
     const menuVariant = {
         show: {
             transition: {
@@ -35,15 +37,17 @@ const NavItems = ({isOpen}) => {
         animate={isOpen ? "show" : "hidden"}
         >
             <motion.div
+            onClick={() => scrollTo('about')}
                 className={styles.item}
                 custom={{ start: 90, end: 90 }}
                 variants={itemVariant}
                 initial="hidden"
                 animate={isOpen ? "show" : "hidden"}
             >
-                Home
+                About me
             </motion.div>
             <motion.div
+            onClick={() => scrollTo('services')}
                 className={styles.item}
                 custom={{ start: 90, end: 65 }}
                 variants={itemVariant}
@@ -53,13 +57,14 @@ const NavItems = ({isOpen}) => {
                 Services
             </motion.div>
             <motion.div
+            onClick={() => scrollTo('steps')}
                 className={styles.item}
                 custom={{ start: 90, end: 36 }}
                 variants={itemVariant}
                 initial="hidden"
                 animate={isOpen ? "show" : "hidden"}    
             >
-                Gallery
+                Next steps
             </motion.div>
         </motion.div>
     )

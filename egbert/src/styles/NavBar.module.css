@@ -24,4 +24,9 @@
     rotate(calc(var(--angle) * -1deg));
   font-size: 1.5rem;
   color: white;
+  cursor: pointer;
+}
+
+.item:hover {
+  color: #b7b7b7;
 }

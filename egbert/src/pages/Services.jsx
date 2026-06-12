@@ -36,7 +36,9 @@ const Services = () => {
         {id: 3, image: painting, alt: 'Paint & Decorated reoom', button: 'Paint & Decorating'},
     ]
     return (
-        <div style={{
+        <div 
+        id='services'
+        style={{
             position: 'relative',
             minHeight: '75vh',
             display: 'flex',

@@ -18,7 +18,9 @@ const Next = () => {
         {id: 3, icon: <LuClipboardPenLine />, title: "Generate a quote"},
     ]
     return (
-        <div style={{
+        <div 
+        id='steps'
+        style={{
             position: 'relative',
             minHeight: '75vh',
             padding: '2rem',

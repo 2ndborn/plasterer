@@ -4,6 +4,7 @@ import Reveal from '../utils/Reveal';
 const About = () => {
   return (
     <div
+    id='about'
     style={{
         position: 'relative',
         minHeight: '50vh',
