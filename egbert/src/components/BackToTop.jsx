@@ -22,6 +22,7 @@ const BackToTop = () => {
                           position: 'fixed',
                           bottom: 20,
                           right: 20,
+                          minWidth: 10,
                           display: 'flex',
                           justifyContent: 'center',
                           alignItems: 'center',

@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { motion} from 'framer-motion';
 import styles from '../styles/NavBar.module.css';
 import NavItems from './NavItems';
+import { useClickOutside } from '../hooks/useClickOutside';
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const handleOpen = () => setIsOpen(prev => !prev)
+    const menuRef = useRef(null);
+    const linkRef = useRef(null);
+
+    useClickOutside([menuRef, linkRef], () => {
+        setIsOpen(false)
+    })
 
     const topBar = {
         close: {
@@ -42,6 +49,7 @@ const NavBar = () => {
   return (
     <>
         <motion.div
+        ref={menuRef}
         initial={{opacity: 0}}
         animate={{opacity: 1}}
         transition={{duration: 0.6, delay: 4.2, ease: 'easeIn'}}
@@ -73,6 +81,7 @@ const NavBar = () => {
             />
         </motion.div>
         <motion.div
+        ref={linkRef}
         initial={{scale: 0}}
         animate={{scale: isOpen ? 1 : 0}}
         transition={{duration: 0.6, ease: 'easeInOut'}}
@@ -92,12 +101,7 @@ const NavBar = () => {
             zIndex: 99
         }}
           >
-            <NavItems isOpen={isOpen} />
-              {/* <div className={styles.radialMenu}>
-                  <div className={styles.item} style={{ '--angle': 90 }}>Home</div>
-                  <div className={styles.item} style={{ '--angle': 65 }}>Services</div>
-                  <div className={styles.item} style={{ '--angle': 36 }}>Gallery</div>
-              </div> */}
+            <NavItems isOpen={isOpen} handleOpen={handleOpen} />
           </motion.div>
     </>
   )

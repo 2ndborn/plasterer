@@ -3,7 +3,7 @@ import { motion} from 'framer-motion';
 import styles from '../styles/NavBar.module.css';
 import { useScrollToSection } from '../hooks/useScrollToSection';
 
-const NavItems = ({isOpen}) => {
+const NavItems = ({isOpen, handleOpen}) => {
     const scrollTo = useScrollToSection();
     const menuVariant = {
         show: {
@@ -37,7 +37,10 @@ const NavItems = ({isOpen}) => {
         animate={isOpen ? "show" : "hidden"}
         >
             <motion.div
-            onClick={() => scrollTo('about')}
+            onClick={() => {
+                    scrollTo('about'),
+                    handleOpen()
+                }}
                 className={styles.item}
                 custom={{ start: 90, end: 90 }}
                 variants={itemVariant}
@@ -47,7 +50,10 @@ const NavItems = ({isOpen}) => {
                 About me
             </motion.div>
             <motion.div
-            onClick={() => scrollTo('services')}
+            onClick={() => {
+                    scrollTo('services'),
+                    handleOpen()
+                }}
                 className={styles.item}
                 custom={{ start: 90, end: 65 }}
                 variants={itemVariant}
@@ -57,7 +63,10 @@ const NavItems = ({isOpen}) => {
                 Services
             </motion.div>
             <motion.div
-            onClick={() => scrollTo('steps')}
+            onClick={() => {
+                    scrollTo('steps'),
+                    handleOpen()
+                }}
                 className={styles.item}
                 custom={{ start: 90, end: 36 }}
                 variants={itemVariant}

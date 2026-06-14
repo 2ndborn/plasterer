@@ -1,0 +1,11 @@
+button {
+    min-width: 150px;
+    padding: 0.75rem;
+    background-color: #d7fc03;
+    color: #3B403E;
+    font-size: clamp(1rem, 0.927rem + 0.36vw, 1.2rem);
+    font-weight: 525;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}

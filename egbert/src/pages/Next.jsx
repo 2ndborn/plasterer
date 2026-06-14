@@ -8,10 +8,7 @@ import { GrSchedule } from "react-icons/gr";
 import { LuClipboardPenLine } from "react-icons/lu";
 
 const Next = () => {
-    const heading = {
-        hidden: {opacity: 0, y: 20},
-        show: {opacity: 1, y: 0}
-    }
+   
     const steps = [
         {id: 1, icon: <FiPhone />, title: "Call me"},
         {id: 2, icon: <GrSchedule />, title: "Schedule a visit"},
@@ -59,16 +56,7 @@ const Next = () => {
                                 {step.id === 1 ? (
                                     <button 
                                         style={{
-                                            minWidth: '150px',
-                                            padding: '0.75rem',
-                                            borderRadius: '10px',
-                                            background: '#d7fc03',
-                                            color: '#3B403E',
-                                            fontSize: '1.2rem',
-                                            fontWeight: 525,
-                                            border: 'none',
-                                            boxShadow: '0px 3px 6px rgba(255, 255, 255, 0.6)',
-                                            cursor: 'pointer',
+                                            boxShadow: '0px 3px 6px rgba(115, 115, 115, 0.6)',
                                             marginBottom: '1.5rem'
                                         }}
                                     >
