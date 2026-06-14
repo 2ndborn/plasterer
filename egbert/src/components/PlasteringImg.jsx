@@ -25,6 +25,7 @@ const PlasteringImg = () => {
         }}>
             <h1>{array[index]}</h1>
             <button
+            className='unstyledBtn'
                 onClick={handleLeft}
                 style={{
                     position: 'absolute',
@@ -36,6 +37,7 @@ const PlasteringImg = () => {
                 <FaChevronLeft />
             </button>
             <button
+            className='unstyledBtn'
             onClick={handleRight}
                 style={{
                     position: 'absolute',

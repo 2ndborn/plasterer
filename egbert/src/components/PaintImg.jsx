@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 
@@ -25,6 +25,7 @@ const PaintImg = () => {
         }}>
             <h1>{images[index]}</h1>
             <button
+            className='unstyledBtn'
                 onClick={handleLeft}
                 style={{
                     position: 'absolute',
@@ -36,6 +37,7 @@ const PaintImg = () => {
                 <FaChevronLeft />
             </button>
             <button
+            className="unstyledBtn"
             onClick={handleRight}
                 style={{
                     position: 'absolute',
