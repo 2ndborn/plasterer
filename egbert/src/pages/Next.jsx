@@ -36,7 +36,7 @@ const Next = () => {
                 }}
             >
                 <div>
-                    <h2 style={{color: '#fff', margin: '0 0 1.5rem 0'}}>Next Steps</h2>
+                    <h2 style={{color: '#fff', margin: '0 0 1.5rem 0'}}>Next Steps...</h2>
                 </div>
                 <div className={styles.NextGrid}>
                     {steps.map((step, i) => (
@@ -52,16 +52,26 @@ const Next = () => {
                             }}
                         >
                             <div data-name={step.id} className={styles.InnerNext}>
-                                <div style={{fontSize: '3rem', margin: '1.5rem  0'}}>{step.icon}</div>
+                                <div style={{ fontSize: '3rem', margin: '1.5rem  0' }}>{step.icon}</div>
                                 {step.id === 1 ? (
-                                    <button 
+                                    <a
+                                        href='Tel:07900111000'
                                         style={{
+                                            display: 'inline-block',
+                                            minWidth: '125px',
                                             boxShadow: '0px 3px 6px rgba(115, 115, 115, 0.6)',
-                                            marginBottom: '1.5rem'
+                                            marginBottom: '1.5rem',
+                                            padding: '0.75rem 1.25rem',
+                                            backgroundColor: '#d7fc03',
+                                            color: '#3b403ec6',
+                                            borderRadius: '10px',
+                                            fontWeight: 600,
+                                            textDecoration: 'none',
+                                            fontSize: '1rem',
                                         }}
                                     >
                                         Contact me
-                                    </button>
+                                    </a>
                                 ) : (
                                     <h4 style={{margin: '2rem 0', lineHeight: 1.4}}>{step.title}</h4>
                                 )}

@@ -6,7 +6,7 @@ const PaintImg = () => {
     const [index, setIndex] = useState(0);
 
     const images = [1, 2, 3];
-    
+
     const handleRight = () => {
         setIndex(prev => (prev + 1) % images.length)
     }
@@ -25,7 +25,8 @@ const PaintImg = () => {
         }}>
             <h1>{images[index]}</h1>
             <button
-            className='unstyledBtn'
+                className='unstyledBtn'
+                aria-label='Previous slide'
                 onClick={handleLeft}
                 style={{
                     position: 'absolute',
@@ -37,8 +38,9 @@ const PaintImg = () => {
                 <FaChevronLeft />
             </button>
             <button
-            className="unstyledBtn"
-            onClick={handleRight}
+                className="unstyledBtn"
+                aria-label='Next slide'
+                onClick={handleRight}
                 style={{
                     position: 'absolute',
                     right: 10,

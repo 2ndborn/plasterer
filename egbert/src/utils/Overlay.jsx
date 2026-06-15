@@ -1,5 +1,5 @@
 import React from 'react';
-import {motion, stagger} from 'framer-motion';
+import {motion} from 'framer-motion';
 import { IoClose } from "react-icons/io5";
 
 
@@ -46,6 +46,8 @@ const Overlay = ({id, onClose, children}) => {
                 zIndex: 0
             }} />
             <button
+                className='unstyledBtn'
+                aria-label='Close overlay'
                 onClick={onClose}
                 style={{
                     position: 'absolute',
@@ -53,7 +55,6 @@ const Overlay = ({id, onClose, children}) => {
                     top: 10,
                     fontSize: '2rem',
                     background: 'transparent',
-                    border: 'none',
                     zIndex: 9999999,
                     cursor: 'pointer'
                 }}

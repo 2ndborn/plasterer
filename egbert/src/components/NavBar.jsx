@@ -20,7 +20,7 @@ const NavBar = () => {
             transition: {duration: 0.2, ease: 'easeInOut'}
         },
         open: { 
-            rotate: -405, x: -10, y: 8,
+            rotate: -405, x: -10, y: 10,
             transition: {duration: 0.2, ease: 'easeInOut'}
         }
     }
@@ -47,63 +47,65 @@ const NavBar = () => {
         }
     }
   return (
-    <>
-        <motion.div
-        ref={menuRef}
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        transition={{duration: 0.6, delay: 4.2, ease: 'easeIn'}}
-        onClick={handleOpen}
-        style={{
-            position: 'fixed',
-            top: 10,
-            right: 10,
-            height: '30px',
-            width: '40px',
-            zIndex: 999,
-            cursor: 'pointer'
-        }}
-        >
-            <motion.span
-            variants={topBar}
-            animate={isOpen ? 'open' : 'close'}
-            className={styles.bars} 
-            />
-            <motion.span 
-            variants={middleBar}
-            animate={isOpen ? 'open' : 'close'}
-            className={styles.bars} 
-            />
-            <motion.span 
-            variants={bottomBar}
-            animate={isOpen ? 'open': 'close'}
-            className={styles.bars} 
-            />
-        </motion.div>
-        <motion.div
-        ref={linkRef}
-        initial={{scale: 0}}
-        animate={{scale: isOpen ? 1 : 0}}
-        transition={{duration: 0.6, ease: 'easeInOut'}}
-        style={{
-            position: 'fixed',
-            top: -150,
-            right: -150,
-            display: 'flex',
-            justifyContent: 'start',
-            alignItems: 'center',
-            height: 500,
-            width: 500,
-            color: 'white',
-            background: '#2e333e',
-            borderRadius: 1000,
-            transformOrigin: 'top right',
-            zIndex: 99
-        }}
+      <>
+          <motion.button
+              ref={menuRef}
+              className='unstyledBtn'
+              aria-label={isOpen ? 'Close menu' : 'Open menu'}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 4.2, ease: 'easeIn' }}
+              onClick={handleOpen}
+              style={{
+                  position: 'fixed',
+                  top: 10,
+                  right: 10,
+                  height: '30px',
+                  width: '40px',
+                  zIndex: 999,
+                  cursor: 'pointer'
+              }}
           >
-            <NavItems isOpen={isOpen} handleOpen={handleOpen} />
+              <motion.span
+                  variants={topBar}
+                  animate={isOpen ? 'open' : 'close'}
+                  className={styles.bars}
+              />
+              <motion.span
+                  variants={middleBar}
+                  animate={isOpen ? 'open' : 'close'}
+                  className={styles.bars}
+              />
+              <motion.span
+                  variants={bottomBar}
+                  animate={isOpen ? 'open' : 'close'}
+                  className={styles.bars}
+              />
+          </motion.button>
+          <motion.div
+              ref={linkRef}
+              initial={{ scale: 0 }}
+              animate={{ scale: isOpen ? 1 : 0 }}
+              transition={{ duration: 0.6, ease: 'easeInOut' }}
+              style={{
+                  position: 'fixed',
+                  top: -150,
+                  right: -150,
+                  display: 'flex',
+                  justifyContent: 'start',
+                  alignItems: 'center',
+                  height: 500,
+                  width: 500,
+                  color: 'white',
+                  background: '#2e333e',
+                  borderRadius: 1000,
+                  transformOrigin: 'top right',
+                  zIndex: 99
+              }}
+          >
+              <NavItems isOpen={isOpen} handleOpen={handleOpen} />
           </motion.div>
-    </>
+      </>
   )
 }
 

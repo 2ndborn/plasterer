@@ -36,25 +36,27 @@ const NavItems = ({isOpen, handleOpen}) => {
         initial="hidden"
         animate={isOpen ? "show" : "hidden"}
         >
-            <motion.div
+            <motion.button
             onClick={() => {
                     scrollTo('about'),
                     handleOpen()
                 }}
-                className={styles.item}
+                className={`${styles.item} unstyledBtn`}
+                aria-label='Go to the about me section'
                 custom={{ start: 90, end: 90 }}
                 variants={itemVariant}
                 initial="hidden"
                 animate={isOpen ? "show" : "hidden"}
             >
                 About me
-            </motion.div>
+            </motion.button>
             <motion.div
             onClick={() => {
                     scrollTo('services'),
                     handleOpen()
                 }}
-                className={styles.item}
+                className={`${styles.item} unstyledBtn`}
+                aria-label='Go to the Services me section'
                 custom={{ start: 90, end: 65 }}
                 variants={itemVariant}
                 initial="hidden"
@@ -67,7 +69,8 @@ const NavItems = ({isOpen, handleOpen}) => {
                     scrollTo('steps'),
                     handleOpen()
                 }}
-                className={styles.item}
+                className={`${styles.item} unstyledBtn`}
+                aria-label='Go to the Next steps me section'
                 custom={{ start: 90, end: 36 }}
                 variants={itemVariant}
                 initial="hidden"

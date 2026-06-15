@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import {AnimatePresence, LayoutGroup, motion} from 'framer-motion';
 import styles from '../styles/Services.module.css';
-import plaster from '../assets/plaster.jpg';
-import painting from '../assets/painting.webp';
-import tile from '../assets/tile.jpg';
 import Reveal from '../utils/Reveal';
 import Overlay from '../utils/Overlay';
 import PlasteringImg from '../components/PlasteringImg';
 import TilingImg from '../components/TilingImg';
 import PaintImg from '../components/PaintImg';
 import { useMediaQuery } from '../hooks/useMediaQuery';
+import { ServiceData } from '../data/ServiceData';
 
 
 const Services = () => {
@@ -41,11 +39,7 @@ const Services = () => {
         hidden: {opacity: 0, y: 20},
         show: {opacity: 1, y: 0}
     }
-    const service = [
-        {id: 1, image: plaster, alt: 'Plastered room', button: 'Plastering', },
-        {id: 2, image: tile, alt: 'Tiling room', button: 'Tiling'},
-        {id: 3, image: painting, alt: 'Paint & Decorated reoom', button: 'Paint & Decorating'},
-    ]
+
     return (
         <div 
         id='services'
@@ -76,7 +70,7 @@ const Services = () => {
                         </div>
                         <div className={styles.SerGrid}>
                             <AnimatePresence>
-                                {service.map((ser, i) => (
+                                {ServiceData.map((ser, i) => (
                                     <motion.div
                                         key={ser.id}
                                         onMouseEnter={() => setIsHoverIndex(i)}
@@ -124,6 +118,7 @@ const Services = () => {
                                             <div style={{ gridRow: 'span 2', place: 'center' }}>
                                                 <motion.button
                                                     onClick={() => handleOpen(ser.id)}
+                                                    aria-label={ser.aria}
                                                     style={{
                                                         boxShadow: 
                                                         '0px 3px 6px rgba(255, 255, 255, 0.6)',

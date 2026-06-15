@@ -13,7 +13,7 @@ const FooterComponent = () => {
                 textAlign: 'center',
                 fontSize: '1.25rem',
                 color: '#fff',
-                background: '#464D5D',
+                background: 'linear-gradient(180deg, #464D5D 0%, #464d5de5 100%)',
                 padding: '0.5rem 1rem'
             }}
         >
@@ -30,8 +30,7 @@ const FooterComponent = () => {
                 </div>
                 <div>
                     <p style={{fontSize: '1rem'}}>
-                        I mainly operate in London and Outer London,
-                        but am open to jobs in other locations.
+                        Based in London and Outer London, but available for work elsewhere.
                     </p>
                 </div>
                 <div>
