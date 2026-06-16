@@ -25,7 +25,7 @@ The owner has plans to improve his skills with email. When that time comes we ca
 |Charcoal Blue - #464D5D|-|-|✅|-|
 |Alabaster Grey - #e8e8e8|✅|-|-|✅|
 
-![Colours](../egbert/readme-assets/assets/Plaster_colours.webp)
+[Colours](../egbert/readme-assets/assets/Plaster_colours.webp)
 
 ### `Fonts`
 ||h1, h2 tags|Rest|
