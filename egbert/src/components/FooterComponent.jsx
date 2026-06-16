@@ -25,7 +25,7 @@ const FooterComponent = () => {
                     transition={{duration: 2, repeat: Infinity, ease: 'easeInOut'}}
                      style={{ fontSize: '1.5rem' }}
                     >
-                        07900 111 222
+                        07551 085 183
                     </motion.p>
                 </div>
                 <div>

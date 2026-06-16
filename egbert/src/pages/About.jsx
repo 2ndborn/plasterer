@@ -30,16 +30,14 @@ const About = () => {
           >
             <h2 style={{ margin: 0 }}>About me</h2>
             <p style={{ fontSize: 'clamp(1.1rem, 0.955rem + 0.73vw, 1.5rem)' }}>
-              Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Necessitatibus, quaerat
-              enim! Ducimus dolores velit vel est eveniet,
-              assumenda odit culpa unde similique nesciunt!
-              Sed quaerat autem a provident consequuntur!
-              Harum? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Corporis culpa libero aliquid
-              earum, assumenda consequuntur consequatur iste
-              qui perspiciatis autem quam modi molestias,
-              quod eos atque ducimus quos maiores illum.
+              My name is Billy Reid. With more than 40 years of hands‑on experience 
+              in the trade, I specialise in delivering high‑quality plastering, 
+              tiling, and finishing work. Over the decades, I’ve refined my craft 
+              through thousands of projects, always focusing on clean lines, smooth 
+              finishes, and a standard of workmanship that stands the test of time. 
+              I take pride in offering a reliable, professional service 
+              the kind built on experience, consistency, and genuine care for 
+              the homes I work in.
             </p>
           </div>
         </div>

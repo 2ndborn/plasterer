@@ -54,24 +54,28 @@ const Next = () => {
                             <div data-name={step.id} className={styles.InnerNext}>
                                 <div style={{ fontSize: '3rem', margin: '1.5rem  0' }}>{step.icon}</div>
                                 {step.id === 1 ? (
-                                    <a
-                                        href='Tel:07900111000'
+                                    <motion.a
+                                        href='Tel:07551085183'
                                         style={{
                                             display: 'inline-block',
                                             minWidth: '125px',
                                             boxShadow: '0px 3px 6px rgba(115, 115, 115, 0.6)',
                                             marginBottom: '1.5rem',
                                             padding: '0.75rem 1.25rem',
-                                            backgroundColor: '#d7fc03',
+                                            backgroundImage: 'radial-gradient(ellipse 125% 100% at 50% 20%, #d7fc03 0%, #a7c404 100%)',
                                             color: '#3b403ec6',
                                             borderRadius: '10px',
                                             fontWeight: 600,
                                             textDecoration: 'none',
                                             fontSize: '1rem',
+                                        }}               
+                                        whileHover={{border: '2px solid #fff', 
+                                            backgroundImage: `radial-gradient(
+                                            ellipse 125% 100% at 50% 20%, #d7fc03 0%, #a7c40455 100%)`,
                                         }}
                                     >
                                         Contact me
-                                    </a>
+                                    </motion.a>
                                 ) : (
                                     <h4 style={{margin: '2rem 0', lineHeight: 1.4}}>{step.title}</h4>
                                 )}

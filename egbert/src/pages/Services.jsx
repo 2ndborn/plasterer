@@ -123,7 +123,11 @@ const Services = () => {
                                                         boxShadow: 
                                                         '0px 3px 6px rgba(255, 255, 255, 0.6)',
                                                     }}
-                                                    whileHover={{ border: '2px solid #fff' }}
+                                                    whileHover={{
+                                                        border: '2px solid #fff', 
+                                                        backgroundImage: `radial-gradient(
+                                                        ellipse 125% 100% at 50% 20%, #d7fc03 0%, #a7c40455 100%)`
+                                                    }}
                                                 >
                                                     {ser.button}
                                                 </motion.button>
