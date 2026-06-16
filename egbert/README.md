@@ -24,7 +24,8 @@ The owner has plans to improve his skills with email. When that time comes we ca
 |Lime Yellow - #d7fc03|-|✅|-|-|
 |Charcoal Blue - #464D5D|-|-|✅|-|
 |Alabaster Grey - #e8e8e8|✅|-|-|✅|
-|White Smoke - #F2F4F3|-|-||✅|
+
+![Colours](../egbert/readme-assets/assets/Plaster_colours.webp)
 
 ### `Fonts`
 ||h1, h2 tags|Rest|
@@ -32,9 +33,9 @@ The owner has plans to improve his skills with email. When that time comes we ca
 |Noto serif|✅|-|
 |Noto sans|-|✅|
 ## Wireframes
-| Home | About me | Portfolio |
+| Mobile | About me | Portfolio |
 |---|---|---|
-|![Home](./docs/assets/home.webp)|![About](./docs/assets/about.webp)|![Portfolio](./docs/assets/portfolio.webp)|
+|![Home](../egbert/readme-assets/assets/plaster_wireframe.webp)|-|-|
 ## Technologies
 ### `Resources`
 * HTML
