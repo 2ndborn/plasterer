@@ -33,9 +33,9 @@ The owner has plans to improve his skills with email. When that time comes we ca
 |Noto serif|✅|-|
 |Noto sans|-|✅|
 ## Wireframes
-| Mobile | About me | Portfolio |
+| Mobile | Tablet | Desktop |
 |---|---|---|
-|Click [here](../egbert/readme-assets/assets/plaster_wireframe.webp) to view image|-|-|
+|Click [here](../egbert/readme-assets/assets/plaster_wireframe.webp) to view image|Click [here](../egbert/readme-assets/assets/plaster_tablet.webp)|Click [here](../egbert/readme-assets/assets/plaster_desktop.webp)|
 ## Technologies
 ### `Resources`
 * HTML
