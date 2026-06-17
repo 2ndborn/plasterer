@@ -55,7 +55,7 @@ const Services = () => {
         }}
         >
             <LayoutGroup>
-                <Reveal origin='right'>
+                {/* <Reveal origin='right'> */}
                     <div
                         style={{
                             padding: '1.5rem',
@@ -148,7 +148,7 @@ const Services = () => {
                         )}
             // above had a bug that crash before I left the handleLeft as a prop after id moved it.
                     </AnimatePresence>
-                </Reveal>
+                {/* </Reveal> */}
             </LayoutGroup>
         </div>
     )
