@@ -12,6 +12,7 @@ const About = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        overflow: 'hidden'
       }}
     >
       <Reveal origin='left'>
