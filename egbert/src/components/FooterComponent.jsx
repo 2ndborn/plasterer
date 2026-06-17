@@ -17,7 +17,7 @@ const FooterComponent = () => {
                 padding: '0.5rem 1rem'
             }}
         >
-            {/* <Reveal origin='left'> */}
+            <Reveal origin='left'>
                 <div>
                     <h4>For an enquiry, please call me on:</h4>
                     <motion.p
@@ -39,7 +39,7 @@ const FooterComponent = () => {
                         {new Date().getFullYear()} All rights reserved.
                     </h6>
                 </div>
-            {/* </Reveal> */}
+            </Reveal>
         </div>
     )
 }

@@ -54,6 +54,25 @@ The owner has plans to improve his skills with email. When that time comes we ca
 * [JSHint, a JavaScript Code Quality Tool](https://jshint.com/)
 * [gh-pages - npm](https://www.npmjs.com/package/gh-pages)
 ## Fixed bugs
+## Mobile Viewport Jolt Fix (with AI Assistance)
+On mobile devices (Android + iOS), the hero section would “jump” when the user started scrolling.
+
+This wasn’t caused by animations or layout, it was due to mobile browsers dynamically resizing the viewport when their UI bars collapse.
+
+With the help of AI debugging, the issue was traced to the use of `100vh`/`100dvh`, which change during scroll on mobile and cause a visible jolt.
+### **Fix**
+The hero height was updated to use the new CSS viewport unit:
+
+```css
+height: 100svh;
+
+```
+`100svh` represents the **smallest stable viewport height**, which does not change when the browser UI collapses.  
+This prevents the hero from resizing during scroll and removes the jolt entirely.
+
+### Gallery Modal underneath one of the sections
+
+### Overlay utility crashing the render
 ### Gallery Modal underneath one of the sections
 ### Overlay utility crashing the render
 ## TESTING

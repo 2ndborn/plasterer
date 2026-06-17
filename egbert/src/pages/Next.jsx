@@ -25,7 +25,7 @@ const Next = () => {
             fontSize: '1.5rem'
         }}
         >
-            {/* <Reveal origin='left'> */}
+            <Reveal origin='left'>
             <div
                 style={{
                     padding: '1.5rem',
@@ -84,7 +84,7 @@ const Next = () => {
                     ))}
                 </div>
             </div>
-            {/* </Reveal> */}
+            </Reveal>
         </div>
     )
 }

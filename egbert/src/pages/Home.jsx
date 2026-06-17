@@ -44,8 +44,8 @@ const Home = () => {
                         position: 'absolute',
                         inset: 0,
                         background: 'linear-gradient(180deg, rgb(70, 77, 93) 0%, rgba(0, 0, 0, 0.5) 100%)',
-                        // display: 'flex',
-                        // alignItems: 'center',
+                        display: 'flex',
+                        alignItems: 'center',
                         transformOrigin: 'top',
                         padding: 0,
                         overflow: 'hidden'
