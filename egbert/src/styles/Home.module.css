@@ -4,9 +4,10 @@
     grid-template-rows: 4fr 1fr;
     place-content: center;
     width: 100%;
-    height: 100%;
+    height: auto;
     color: #fff;
     text-align: center;
+    outline: 2px solid lime;
 }
 
 .HomeGrid > div:nth-child(1) {

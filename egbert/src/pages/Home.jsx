@@ -24,7 +24,7 @@ const Home = () => {
   return (
         <div id='top'>
             <motion.div
-                style={{ height: "100dvh", display: 'flex', overflow: 'hidden', border: '3px solid red' }}
+                style={{ height: "100dvh", display: 'flex', background: '#000' }}
                 variants={container}
                 initial='hidden'
                 animate='show'
@@ -43,7 +43,7 @@ const Home = () => {
                         display: 'flex',
                         alignItems: 'center',
                         transformOrigin: 'top',
-                        padding: '2rem 0.75rem'
+                        padding: 0
                     }}
                 >
                     <motion.div
@@ -59,14 +59,14 @@ const Home = () => {
                             background: '#fff'
                         }}
                     />
-                    <div className={styles.HomeGrid}>
+                    <div className={styles.HomeGrid} style={{boxSizing: 'border-box', padding: '2rem 0.75rem'}}>
                         <div>
                             <motion.h1
                                 variants={text}
                                 initial='hidden'
                                 animate='show'
                                 transition={{ duration: 1, delay: 2, ease: 'easeInOut' }}
-                                style={{ fontSize: 'clamp(3.5rem, 2.955rem + 2.73vw, 5rem)', margin: 0 }}
+                                style={{ fontSize: 'clamp(2.5rem, 2rem + 3vw, 4rem)' , margin: 0 }}
                             >
                                 Augustus Finishing Co.
                             </motion.h1>

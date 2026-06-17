@@ -38,7 +38,7 @@ const Reveal = ({ children, origin }) => {
         }
     }
     return (
-        <div ref={ref}>
+        <div ref={ref} style={{position: 'relative', overflow: 'hidden', zIndex:0}}>
             <motion.div
                 variants={overlay}
                 initial='hidden'
