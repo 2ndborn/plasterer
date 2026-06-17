@@ -24,7 +24,7 @@ const Home = () => {
   return (
         <div id='top'>
             <motion.div
-                style={{ height: "100dvh", background: '#000', overflow: 'hidden' }}
+                style={{ height: "100dvh", background: '#464D5D', overflow: 'hidden' }}
                 variants={container}
                 initial='hidden'
                 animate='show'
@@ -43,7 +43,8 @@ const Home = () => {
                         // display: 'flex',
                         // alignItems: 'center',
                         transformOrigin: 'top',
-                        padding: 0
+                        padding: 0,
+                        overflow: 'hidden'
                     }}
                 >
                     <motion.div
