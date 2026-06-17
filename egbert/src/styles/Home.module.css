@@ -7,7 +7,7 @@
     height: auto;
     color: #fff;
     text-align: center;
-    outline: 2px solid lime;
+    outline: 2px solid limegreen;
 }
 
 .HomeGrid > div:nth-child(1) {
