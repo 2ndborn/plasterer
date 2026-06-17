@@ -8,14 +8,14 @@ const About = () => {
       style={{
         position: 'relative',
         minHeight: '50vh',
-        padding: '2rem',
+        // padding: '2rem',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
         overflow: 'hidden'
       }}
     >
-      {/* <Reveal origin='left'> */}
+      <Reveal origin='left'>
         <div style={{
           fontSize: '1.5rem',
           color: '#fff',
@@ -42,7 +42,7 @@ const About = () => {
             </p>
           </div>
         </div>
-      {/* </Reveal> */}
+      </Reveal>
     </div>
   )
 }
