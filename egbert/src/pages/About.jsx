@@ -8,7 +8,7 @@ const About = () => {
       style={{
         position: 'relative',
         minHeight: '50vh',
-        // padding: '2rem',
+        padding: '2rem',
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
