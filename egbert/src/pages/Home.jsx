@@ -24,7 +24,7 @@ const Home = () => {
   return (
         <div id='top'>
             <motion.div
-                style={{ height: "100dvh", display: 'flex', background: '#000' }}
+                style={{ height: "100dvh", background: '#000' }}
                 variants={container}
                 initial='hidden'
                 animate='show'
