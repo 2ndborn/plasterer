@@ -30,7 +30,7 @@ const Home = () => {
                 animate='show'
                 transition={{ duration: 1, ease: 'easeInOut' }}
             >
-                <CarouselComponent />
+                {/* <CarouselComponent /> */}
                 <motion.div
                     variants={overlay}
                     initial='hidden'
