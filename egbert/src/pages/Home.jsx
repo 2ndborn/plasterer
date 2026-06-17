@@ -43,7 +43,7 @@ const Home = () => {
                         display: 'flex',
                         alignItems: 'center',
                         transformOrigin: 'top',
-                        padding: '0 0.75rem'
+                        padding: '2rem 0.75rem'
                     }}
                 >
                     <motion.div
@@ -66,7 +66,7 @@ const Home = () => {
                                 initial='hidden'
                                 animate='show'
                                 transition={{ duration: 1, delay: 2, ease: 'easeInOut' }}
-                                style={{ fontSize: 'clamp(3.5rem, 2.955rem + 2.73vw, 5rem)' }}
+                                style={{ fontSize: 'clamp(3.5rem, 2.955rem + 2.73vw, 5rem)', margin: 0 }}
                             >
                                 Augustus Finishing Co.
                             </motion.h1>

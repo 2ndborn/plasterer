@@ -103,13 +103,13 @@ const Services = () => {
                                                             initial='hidden'
                                                             animate='show'
                                                             transition={{ duration: 0.6, ease: 'easeInOut' }}
-                                                            style={{ color: '#fff', margin: 0, lineHeight: '1.4' }}
+                                                            style={{ color: '#fff', margin: 0 }}
                                                         >
                                                             Click below to see the {ser.button.toLowerCase()} gallery
                                                         </motion.h5>)
                                                 ) : (
                                                     <motion.h5
-                                                        style={{ fontSize: 'clamp(0.9rem, 0.718rem + 0.91vw, 1.4rem)', color: '#fff', margin: 0, lineHeight: '1.4' }}
+                                                        style={{ fontSize: 'clamp(0.9rem, 0.718rem + 0.91vw, 1.4rem)', color: '#fff', margin: 0 }}
                                                     >
                                                         Click below to see the {ser.button.toLowerCase()} gallery
                                                     </motion.h5>

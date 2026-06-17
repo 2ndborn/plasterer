@@ -12,7 +12,6 @@ const About = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        border: '2px solid red'
       }}
     >
       <Reveal origin='left'>
