@@ -13,10 +13,10 @@ import { ServiceData } from '../data/ServiceData';
 const Services = () => {
     const [isHoverIndex, setIsHoverIndex] = useState(null);
     const [istoggled, setIsToggled] = useState(null);
-    const [matches, setMatches] = useState(window.matchMedia('(min-width: 768px)').matches)
+    const [matches, setMatches] = useState(window.matchMedia('(min-width: 769px)').matches)
 
     useEffect(() => {
-        const media = window.matchMedia('(min-width: 768px)')
+        const media = window.matchMedia('(min-width: 769px)')
         const handleMedia = (e) => {
             setMatches(e.matches)
             console.log(e.matches)
@@ -25,7 +25,7 @@ const Services = () => {
         return () => media.removeEventListener('change', handleMedia)
     }, [])
 
-    const isSmall = useMediaQuery('(min-width: 768px)');
+    const isSmall = useMediaQuery('(min-width: 769px)');
 
     const handleOpen = (id) => {
         setIsToggled(id)
@@ -92,10 +92,10 @@ const Services = () => {
                                                 background: isSmall ? 'rgba(0, 0, 0, 0.2)' : 'rgba(0, 0, 0, 0.5)',
                                                 padding: '1rem',
                                                 display: 'grid',
-                                                gridTemplateRows: 'repeat(4, 1fr)',
+                                                gridTemplateRows: 'repeat(3, 1fr)',
                                             }}
                                         >
-                                            <div style={{ gridRow: 'span 3', placeContent: 'center' }}>
+                                            <div style={{ gridRow: '1 / span 2', placeContent: 'center' }}>
                                                 {matches ? (
                                                     isHoverIndex === i && (
                                                         <motion.h5
@@ -103,19 +103,19 @@ const Services = () => {
                                                             initial='hidden'
                                                             animate='show'
                                                             transition={{ duration: 0.6, ease: 'easeInOut' }}
-                                                            style={{ color: '#fff', marginTop: '5rem', lineHeight: '1.4' }}
+                                                            style={{ color: '#fff', margin: 0, lineHeight: '1.4' }}
                                                         >
                                                             Click below to see the {ser.button.toLowerCase()} gallery
                                                         </motion.h5>)
                                                 ) : (
                                                     <motion.h5
-                                                        style={{ color: '#fff', marginTop: 'min(5rem, 12%)', lineHeight: '1.4' }}
+                                                        style={{ fontSize: 'clamp(0.9rem, 0.718rem + 0.91vw, 1.4rem)', color: '#fff', margin: 0, lineHeight: '1.4' }}
                                                     >
                                                         Click below to see the {ser.button.toLowerCase()} gallery
                                                     </motion.h5>
                                                 )}
                                             </div>
-                                            <div style={{ gridRow: 'span 2', place: 'center' }}>
+                                            <div style={{ gridRow: '3 / span 1', placeContent: 'center' }}>
                                                 <motion.button
                                                     onClick={() => handleOpen(ser.id)}
                                                     aria-label={ser.aria}

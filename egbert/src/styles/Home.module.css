@@ -15,20 +15,29 @@
 
 .HomeGrid > div:nth-child(2) {
     position: relative;
-    font-size: 1.5rem;
     grid-area: 8 / 1 / span 1 / 1;
 }
 
 .HomeGrid > div:nth-child(3) {
     position: relative;
-    font-size: 1.5rem;
     grid-area: 8 / 2 / span 1 / 2;
 }
 
 .HomeGrid > div:nth-child(4) {
     position: relative;
-    font-size: 1.5rem;
     grid-area: 8 / 3 / span 1 / -1;
+}
+
+.HomeGrid > p {
+    font-size: clamp(1.2rem, 1.091rem + 0.55vw, 1.5rem);
+}
+
+.HomeGrid > div:nth-child(2),
+.HomeGrid > div:nth-child(3),
+.HomeGrid > div:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .VerticalLine {

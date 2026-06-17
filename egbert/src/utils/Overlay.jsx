@@ -30,7 +30,9 @@ const Overlay = ({id, onClose, children}) => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                padding: '5rem 5rem',
+                padding: '5rem',
+                paddingLeft: 'min(5rem, 5%)',
+                paddingRight: 'min(5rem, 5%)',
                 boxSizing: 'border-box',
                 zIndex: 9999999 //was a bug making the next.jsx section overlay the overlay
             }}

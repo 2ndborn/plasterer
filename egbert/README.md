@@ -98,7 +98,7 @@ This package handles publishing the Vite build output to a dedicated `gh-pages` 
 
 This ensures Vite builds assets with the correct absolute paths for GitHub Pages.
 <div style="background:#f6f8fa; padding:1em; border-radius:6px;">
-<pre><code>"homepage": "https://2ndborn.github.io/micah-francis.com"
+<pre><code>"homepage": "https://2ndborn.github.io/plasterer/"
 </code></pre>
 </div>
 
@@ -119,7 +119,7 @@ In `vite.config.js`:
 <div style="background:#f6f8fa; padding:1em; border-radius:6px;">
 <pre><code>export default defineConfig({
   plugins: [react()],
-  base: '/micah-francis.com/'
+  base: '/plasterer/'
 })
 </code></pre>
 </div>
@@ -170,6 +170,6 @@ Save the settings.
 
 #### 9. Access the live site
 <div style="background:#f6f8fa; padding:1em; border-radius:6px;">
-<pre><code>https://2ndborn.github.io/micah-francis.com/
+<pre><code>https://2ndborn.github.io/plasterer/
 </code></pre>
 </div>
