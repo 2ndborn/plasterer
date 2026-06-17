@@ -15,7 +15,7 @@ const About = () => {
         overflow: 'hidden'
       }}
     >
-      <Reveal origin='left'>
+      {/* <Reveal origin='left'> */}
         <div style={{
           fontSize: '1.5rem',
           color: '#fff',
@@ -42,7 +42,7 @@ const About = () => {
             </p>
           </div>
         </div>
-      </Reveal>
+      {/* </Reveal> */}
     </div>
   )
 }
