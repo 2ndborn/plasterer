@@ -22,15 +22,19 @@ const Home = () => {
     }
 
   return (
-        <div id='top'>
-            <motion.div
-                style={{position: 'relative', height: "calc(var(--vh) * 100)", overflow: 'hidden' }}
-                variants={container}
-                initial='hidden'
-                animate='show'
-                transition={{ duration: 1, ease: 'easeInOut' }}
-            >
-                <CarouselComponent />
+      <div id='top'>
+          <motion.div
+              style={{
+                  position: "relative",
+                  height: "100svh",
+                  overflow: "hidden"
+              }}
+              variants={container}
+              initial="hidden"
+              animate="show"
+              transition={{ duration: 1, ease: "easeInOut" }}
+          >
+              <CarouselComponent />
                 <motion.div
                     variants={overlay}
                     initial='hidden'
