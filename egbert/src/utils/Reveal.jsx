@@ -12,7 +12,7 @@ const Reveal = ({ children, origin }) => {
             mainControls.start('show').then(() => {
                 mainControls.start('second')
             })
-            // innerControls.start('show')
+            innerControls.start('show')
         }
     }, [isInView, mainControls, innerControls])
 
@@ -30,13 +30,13 @@ const Reveal = ({ children, origin }) => {
         }
     }
 
-    // const inner = {
-    //     hidden: { opacity: 0, y: 10 },
-    //     show: {
-    //         opacity: 1, y: 0,
-    //         transition: { duration: 0.8, delay: 0.5, ease: 'easeIn' }
-    //     }
-    // }
+    const inner = {
+        hidden: { opacity: 0, y: 10 },
+        show: {
+            opacity: 1, y: 0,
+            transition: { duration: 0.8, delay: 0.5, ease: 'easeIn' }
+        }
+    }
     return (
         <div ref={ref} style={{position: 'relative', overflow: 'hidden', zIndex:0}}>
             <motion.div

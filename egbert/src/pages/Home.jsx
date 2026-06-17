@@ -11,8 +11,8 @@ const Home = () => {
     }
 
     const overlay = {
-        hidden: {scaleY: 0},
-        show: {scaleY: 1},
+        hidden: {clipPath: "inset(0 0 100% 0)"},
+        show: {clipPath: "inset(0 0 0% 0)"},
         border: {borderBottom: 'none'}
     }
 
