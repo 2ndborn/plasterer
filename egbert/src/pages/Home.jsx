@@ -24,7 +24,7 @@ const Home = () => {
   return (
         <div id='top'>
             <motion.div
-                style={{position: 'relative', height: "100dvh", background: '#e8e8e8', overflow: 'hidden' }}
+                style={{position: 'relative', height: "calc(var(--vh) * 100)", overflow: 'hidden' }}
                 variants={container}
                 initial='hidden'
                 animate='show'
