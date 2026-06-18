@@ -25,12 +25,11 @@ Visit the deployed site: [Plasterer]https://2ndborn.github.io/plasterer/)
 
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
-* [Website]()
-* [App.css]()
-* [Home.module.css]()
-* [Services.module.css]()
-* [Next.module.css]()
-* [NavBar.module.css]()
+* [App.css](../egbert/readme-assets/assets/apps_css.jpg)
+* [Home.module.css](../egbert/readme-assets/assets/home_css.jpg)
+* [Services.module.css](../egbert/readme-assets/assets/service_css.jpg)
+* [Next.module.css](../egbert/readme-assets/assets/next_css.jpg)
+* [NavBar.module.css](../egbert/readme-assets/assets/navbar_css.jpg)
 - - -
 ### **Performance & Accessibility Testing**
 This project was evaluated using **Google Lighthouse** to ensure strong performance, accessibility, best practices, and SEO. The site achieved high scores across all categories, confirming that it is fast, accessible, and built following modern web standards.
