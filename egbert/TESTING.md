@@ -1,20 +1,15 @@
 # Plasterer Testing
-
-  
-
-Visit the deployed site: [Kara Haircare](https://karahaircare.co.uk)
+Visit the deployed site: [Plasterer]https://2ndborn.github.io/plasterer/)
 
 ---
 
 ## CONTENTS
 
-  
-
 * [AUTOMATED TESTING](#automated-testing)
 
-* [W3C Validator](#w3c-validator)
+* [W3C Validator](#w3c-validator) for CSS
 
-* [JavaScript Validator](#javascript-validator)
+* ESLint is installed as a JavaScript Validator
 
 * [MANUAL TESTING](#manual-testing)
 
@@ -31,46 +26,14 @@ Visit the deployed site: [Kara Haircare](https://karahaircare.co.uk)
 [W3C](https://validator.w3.org/) was used to validate the HTML on all pages of the website. It was also used to validate the CSS.
 
 * [Website]()
-
-  
-
 * [App.css]()
-
 * [Home.module.css]()
-
 * [Services.module.css]()
-
 * [Next.module.css]()
-
 * [NavBar.module.css]()
-
 - - -
-
-  
-
 ### **Performance & Accessibility Testing**
-
-  
-
 This project was evaluated using **Google Lighthouse** to ensure strong performance, accessibility, best practices, and SEO. The site achieved high scores across all categories, confirming that it is fast, accessible, and built following modern web standards.
-
-  
-
-### JavaScript Validator
-
-  
-
-[jshint](https://jshint.com/) was used to validate the JavaScript.
-
-  
-
-* [script.js]()
-
-* [quiz.js]()
-
-* [wiki.js]()
-
-- - -
 
 ## MANUAL TESTING
 
@@ -80,20 +43,21 @@ This project was evaluated using **Google Lighthouse** to ensure strong performa
 
 | Goals | How are they achieved? | Evidence |
 | :--- | :--- | :--- |
-| I want to gain access to the About me, Services and Next steps section via the nav bar, | The hamburger menu reveal options to smooth scroll to each section. | ![Navbar]() |
+| I want to navigate between the different sections of the website, so I can get the information that I need. | The hamburger menu reveal options to smooth scroll to each section. | ![Navbar]() |
 
 `About me`
 
 | Goal | How is this achieved | Evidence |
 | --- | --- | --- |
-|I want to view a list of the services that the owner offers , so I can identify whether they provide the service I am looking for.|Users can down to the About me section to read a short bio about the owner.|![image of the owners bio]()|
+|I want to read a short bio about the owner so that I can learn a bit about them.
+|Users can down to the About me section to read a short bio about the owner.|![image of the owners bio]()|
 
 `Services`
 
 | Goal | How is this achieved | Evidence |
 | --- | --- | --- |
 |I want to view a list of the services that the owner offers , so I can identify whether they provide the service I am looking for.|In the Services section users can see the owner offers a Plastering, Tiling and Paint & Decorating services.|![Image of various picture]()|
-|I want to view some of the owners works, so I can verify their expertises.|Users can click a Plasterer, Tiling and Paint & Decorating buttons to view a Modal containing images of the owners work.|![image of the individual image]()|
+| I want to view some of the owners works, so I can verify their expertises.|Users can click a Plasterer, Tiling and Paint & Decorating buttons to view a Modal containing images of the owners work.|![image of the individual image]()|
 
 `Next steps`
 
@@ -107,7 +71,7 @@ This project was evaluated using **Google Lighthouse** to ensure strong performa
 | --- | --- | --- |
 |I want to view links to the phone number, so I have the means to contact them.|Users can scroll down to the bottom of the page and see the owners mobile number in the footer.|![Image of the Footer]()|
 
-`Contact me`
+`General`
 
 | Goal | How is this achieved | Evidence |
 | --- | --- | --- |
@@ -119,94 +83,38 @@ This project was evaluated using **Google Lighthouse** to ensure strong performa
 Full testing was performed on the following devices:
 
 * Laptop:
-
-* MSI Summit 13 AI+ Evo A2VMTG
-
-* HP
-
-* Google Chromebook
+	* MSI Summit 13 AI+ Evo A2VMTG
+	* HP
+	* Google Chromebook
 
 * Mobile Devices:
-
-* iPhone 13 pro
-
-* Google Pixel 6 Pro
+	* iPhone 13 pro
+	* Google Pixel 6 Pro
+	* Google Pixel 9a
+	* Motorola g 06
 ____
 Devices tested the site using the following browsers:
 
 * Google Chrome
-
 * Edge
-
 * Firefox
-
 * Opera
 ---
 ### Additional Testing 
 Additional testing was taken by friends and family on a variety of devices and screen sizes.
 
-  
-
 | Feature | Expected Outcome | Testing Performed | Result | Pass/Fail |
-
 | --- | --- | --- | --- | --- |
-
 |**`Navbar`**|
-
-| Home navlink | When clicked, the user is taken to the Home page | Clicked the Home navlink | Navigated to the Home page | ✅ |
-
-| About Me navlink | When clicked, the user is taken to the About Me page | Clicked the About Me navlink | Navigated to the About Me page | ✅ |
-
-| Portfolio navlink | When clicked, the user is taken to the Portfolio page | Clicked the Portfolio navlink | Navigated to the Portfolio page | ✅ |
-
-| Hover effect on nav items | When hovering over a nav item, it increases in size and changes colour | Hovered over nav items | Items increased in size and changed to **hsl(300, 100%, 40%)** | ✅ |
-
+| About Me | When clicked, the user is taken to the About Me section| Clicked the About Me button | smooth scrolled to the About Me section| ✅ |
+| Services | When clicked, the user is taken to the Services section | Clicked the Services button | smooth scrolled to the Services section| ✅ |
+| Next steps| When clicked, the user is taken to the Next steps section | Clicked the Next steps button | smooth scrolled to the Next steps section| ✅ |
+| Hover effect on nav items | When hovering over a nav item, it changes colour | Hovered over nav items | Items changed to **#b7b7b7** | ✅ |
 | --- | --- | --- | --- | --- |
-
-|**`Footer`**|
-
-| Icon hover | When hovering over an icon, it changes to a lighter colour to indicate interaction | Hovered over icons | Icons changed to **hsl(300, 100%, 40%)** | ✅ |
-
-| WhatsApp button | When clicked, WhatsApp opens with the message “Hi Micah” | Clicked the WhatsApp button | WhatsApp opened with the message “Hi Micah” | ✅ |
-
-| Email button | When clicked, the user’s email client opens with a new message starting with “Hi Micah” | Clicked the Email button | Email client opened with a new message containing “Hi Micah” | ✅ |
-
-| LinkedIn/GitHub buttons | When clicked, a new tab opens with the owner’s LinkedIn or GitHub page | Clicked the LinkedIn/GitHub buttons | LinkedIn/GitHub opened in a new tab | ✅ |
-
+|**`Services Page`**|
+| Services buttons | When the Plasterer, Tiling and Paint & Decorating button is clicked it opens a modal with a gallery unique to each title.|Clicked the Plasterer, Tiling and Paint & Decorating buttons | A modal opened with a galley unique to each title.| ✅ |
+| Modal buttons | When the  are clicked they navigate through the gallery backwards and forwards.|Clicked the **`<`** and **`>`** buttons | Navigated through the gallery backwards and forwards.| ✅ |
 | --- | --- | --- | --- | --- |
-
-|**`Home Page`**|
-
-| See Portfolio button | When clicked, the user is taken to the Portfolio page | Clicked the “See Portfolio” button | Portfolio page rendered | ✅ |
-
-| See About Me button | When clicked, the user is taken to the About Me page | Clicked the “See About Me” button | About Me page rendered | ✅ |
-
-|**`About Me Page`**|
-
-| All “See more” buttons | When hovering over the buttons, they highlight to **hsl(300, 100%, 40%)** | Hovered over buttons | Buttons highlighted correctly | ✅ |
-
-| Executive Statement | When clicking “See more,” additional text is revealed | Clicked “See more” | Additional paragraph displayed | ✅ |
-
-| All carousels | After 10 seconds of no interaction, the carousel moves to the next card | Did not interact with the screen | Next card appeared after 10 seconds | ✅ |
-
-| All carousels | When interacting with a card, the carousel pauses | Hovered over cards | Carousel paused and did not advance | ✅ |
-
-| All carousels | If “See more” is clicked on a new card, the previously expanded card collapses | Expanded one card, moved to another, clicked “See more” | Previous card collapsed as expected | ✅ |
-
-| All carousels | Clicking “See more” expands the card to reveal additional content | Clicked “See more” | Additional content displayed | ✅ |
-
-| --- | --- | --- | --- | --- |
-
-|**`Portfolio Page`**|
-
-| Search bar | When typing a language, the carousel filters projects by that language/framework and the dots update accordingly | Typed languages used across projects | Carousel filtered correctly and dots updated | ✅ |
-
-| Search bar | When typing a language that does not exist, the message *“No projects found using the ‘[language]’ language.”* is displayed | Typed “adf” | Message displayed correctly | ✅ |
-
-| Language icons | When hovering over language icons, the language name appears above | Hovered over icons | Language names appeared above icons | ✅ |
-
-| Website/GitHub buttons | When hovering, buttons expand and highlight to **hsl(300, 100%, 40%)** | Hovered over buttons | Buttons expanded and highlighted | ✅ |
-
-| Website/GitHub buttons | When clicked, a new tab opens with the website or GitHub repository | Clicked buttons | New tab opened with correct destination | ✅ |
-
-| Portfolio carousel | After 10 seconds, the carousel moves to the next card | Watched the carousel | Next card appeared after 10 seconds | ✅ |
+|**`Next steps`**|
+| Contact me button (mobile) | When the Contact me button is clicked it opens the phone app on a mobile.|Clicked the button on a mobile device 600px. | The phone app is opened| ✅ |
+| Contact me button (Tablet/Desktop) | When the Contact me button is clicked scrolls down to the footer section.|Clicked the button on desktop and tablet device. | The user is transferred to the footer section| ✅ |

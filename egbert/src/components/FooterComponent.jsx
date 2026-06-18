@@ -5,6 +5,7 @@ import Reveal from '../utils/Reveal'
 const FooterComponent = () => {
     return (
         <div
+            id='footer'
             style={{
                 display: 'flex',
                 flexDirection: 'column',

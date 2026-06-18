@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import {AnimatePresence, LayoutGroup, motion} from 'framer-motion';
 import styles from '../styles/Services.module.css';
 import Reveal from '../utils/Reveal';
@@ -13,10 +13,10 @@ import { ServiceData } from '../data/ServiceData';
 const Services = () => {
     const [isHoverIndex, setIsHoverIndex] = useState(null);
     const [istoggled, setIsToggled] = useState(null);
-    const [matches, setMatches] = useState(window.matchMedia('(min-width: 769px)').matches)
+    const [matches, setMatches] = useState(window.matchMedia('(min-width: 1025px)').matches)
 
     useEffect(() => {
-        const media = window.matchMedia('(min-width: 769px)')
+        const media = window.matchMedia('(min-width: 1025px)')
         const handleMedia = (e) => {
             setMatches(e.matches)
             console.log(e.matches)
@@ -25,7 +25,7 @@ const Services = () => {
         return () => media.removeEventListener('change', handleMedia)
     }, [])
 
-    const isSmall = useMediaQuery('(min-width: 769px)');
+    const isSmall = useMediaQuery('(min-width: 1025px)');
 
     const handleOpen = (id) => {
         setIsToggled(id)

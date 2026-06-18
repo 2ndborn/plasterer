@@ -6,8 +6,8 @@ import { IoClose } from "react-icons/io5";
 const Overlay = ({id, onClose, children}) => {
     const modalVariants = {
         initial: { opacity: 0, y: 20, scale: 0.2 },
-        animate: { opacity: 1, y: 0, scale: 1, transition: {staggerChildren: 0.2} },
-        exit: { opacity: 0, y: 20, scale: 0.2, transition: { duration: 0.2, ease: 'easeInOut' } },
+        animate: { opacity: 1, y: 0, scale: 1, transition: {duration: 0.5, staggerChildren: 0.2} },
+        exit: { opacity: 0, y: 20, scale: 0.2, transition: { duration: 0.3, ease: 'easeInOut' } },
     };
 
     const blurVariant = {

@@ -29,7 +29,7 @@
     padding: 0.5rem 0.75rem;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 1025px) {
     .NextGrid {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);

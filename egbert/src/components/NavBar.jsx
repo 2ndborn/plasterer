@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion} from 'framer-motion';
 import styles from '../styles/NavBar.module.css';
 import NavItems from './NavItems';
@@ -6,13 +6,13 @@ import { useClickOutside } from '../hooks/useClickOutside';
 
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const handleOpen = () => setIsOpen(prev => !prev)
+    const handleOpen = () => setIsOpen(prev => !prev);
     const menuRef = useRef(null);
     const linkRef = useRef(null);
 
     useClickOutside([menuRef, linkRef], () => {
-        setIsOpen(false)
-    })
+        setIsOpen(false);
+    });
 
     const topBar = {
         close: {
@@ -23,7 +23,7 @@ const NavBar = () => {
             rotate: -405, x: -10, y: 10,
             transition: {duration: 0.2, ease: 'easeInOut'}
         }
-    }
+    };
 
     const middleBar = {
         close: {
@@ -34,7 +34,7 @@ const NavBar = () => {
             opacity: 0,
             transition: {duration: 0.6, ease: 'easeInOut'}
         }
-    }
+    };
 
     const bottomBar = {
         close: {
@@ -45,7 +45,7 @@ const NavBar = () => {
             rotate: 405, x: -10, y: -8,
             transition: {duration: 0.2, ease: 'easeInOut'}
         }
-    }
+    };
   return (
       <>
           <motion.button
@@ -97,7 +97,7 @@ const NavBar = () => {
                   height: 500,
                   width: 500,
                   color: 'white',
-                  background: '#2e333e',
+                  background: '#2e333efa',
                   borderRadius: 1000,
                   transformOrigin: 'top right',
                   zIndex: 99

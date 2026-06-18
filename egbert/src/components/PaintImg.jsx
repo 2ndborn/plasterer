@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 
 const PaintImg = () => {
     const [index, setIndex] = useState(0);
 
-    const images = [1, 2, 3];
+    const images = [7, 8, 9];
 
     const handleRight = () => {
         setIndex(prev => (prev + 1) % images.length)
