@@ -1,5 +1,6 @@
 
 # Plasterer
+![Repsonsiveness](../egbert/readme-assets/assets/plaster%20responsive.jpg)
 ## Mission statement
 This website is for the owner who works in the construction trade to showcase his works and attract new business.
 ## User Stories
@@ -79,7 +80,7 @@ This prevents the hero from resizing during scroll and removes the jolt entirely
 Please click [here](../egbert/TESTING.md) to view application testing.
 ## LOCAL DEVELOPMENT
 ### Clone Repository
-1. Login/Sign up to [GitHub]([GitHub](https://github.com/)
+1. Login/Sign up to [GitHub](https://github.com/)
 2. Go to the project repository [GitHub - 2ndborn/plasterer](https://github.com/2ndborn/plasterer)
 3. Click on the green code button, select whether you would like to clone with **HTTPS**, SSH or GitHub CLI and copy the link shown.
 4. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory. ls (list the files and folder) cd <name of location/directory>(change directory)
