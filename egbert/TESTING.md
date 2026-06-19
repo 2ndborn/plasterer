@@ -1,5 +1,5 @@
 # Plasterer Testing
-Visit the deployed site: [Plasterer]https://2ndborn.github.io/plasterer/)
+Visit the deployed site: [Plasterer](https://2ndborn.github.io/plasterer/)
 
 ---
 
@@ -42,39 +42,39 @@ This project was evaluated using **Google Lighthouse** to ensure strong performa
 
 | Goals | How are they achieved? | Evidence |
 | :--- | :--- | :--- |
-| I want to navigate between the different sections of the website, so I can get the information that I need. | The hamburger menu reveal options to smooth scroll to each section. | ![Navbar]() |
+| I want to navigate between the different sections of the website, so I can get the information that I need. | The hamburger menu reveal options to smooth scroll to each section. | ![Navbar](../egbert/readme-assets/assets/nav_evidence.jpg) |
 
 `About me`
 
 | Goal | How is this achieved | Evidence |
 | --- | --- | --- |
 |I want to read a short bio about the owner so that I can learn a bit about them.
-|Users can down to the About me section to read a short bio about the owner.|![image of the owners bio]()|
+|Users can down to the About me section to read a short bio about the owner.|![image of the owners bio](../egbert/readme-assets/assets/about_evidence.jpg)|
 
 `Services`
 
 | Goal | How is this achieved | Evidence |
 | --- | --- | --- |
-|I want to view a list of the services that the owner offers , so I can identify whether they provide the service I am looking for.|In the Services section users can see the owner offers a Plastering, Tiling and Paint & Decorating services.|![Image of various picture]()|
+|I want to view a list of the services that the owner offers , so I can identify whether they provide the service I am looking for.|In the Services section users can see the owner offers a Plastering, Tiling and Paint & Decorating services.|![Image of various picture](../egbert/readme-assets/assets/services_evidence.jpg)|
 | I want to view some of the owners works, so I can verify their expertises.|Users can click a Plasterer, Tiling and Paint & Decorating buttons to view a Modal containing images of the owners work.|![image of the individual image]()|
 
 `Next steps`
 
 | Goal | How is this achieved | Evidence |
 | --- | --- | --- |
-|I want to view a set of intructions informing me of the next steps to take so I know how to engage with the owner.|User can scroll down to the Next steps section.|![Image of the Contact page]()|
+|I want to view a set of intructions informing me of the next steps to take so I know how to engage with the owner.|User can scroll down to the Next steps section.|![Image of the Contact page](../egbert/readme-assets/assets/next_evidence.jpg)|
 
 `Contact me`
 
 | Goal | How is this achieved | Evidence |
 | --- | --- | --- |
-|I want to view links to the phone number, so I have the means to contact them.|Users can scroll down to the bottom of the page and see the owners mobile number in the footer.|![Image of the Footer]()|
+|I want to view links to the phone number, so I have the means to contact them.|Users can scroll down to the bottom of the page and see the owners mobile number in the footer.|![Image of the Footer](../egbert/readme-assets/assets/contact_evidence.jpg)|
 
 `General`
 
 | Goal | How is this achieved | Evidence |
 | --- | --- | --- |
-| I want the app to function across multiple devices, so that I can access and use it without restrictions regardless of the device I'm on.|Users can access the site on multiply devices.|![Homepage]()|
+| I want the app to function across multiple devices, so that I can access and use it without restrictions regardless of the device I'm on.|Users can access the site on multiply devices.|![Homepage](../egbert/readme-assets/assets)|
 
 - - -
 
@@ -112,7 +112,7 @@ Additional testing was taken by friends and family on a variety of devices and s
 | --- | --- | --- | --- | --- |
 |**`Services Page`**|
 | Services buttons | When the Plasterer, Tiling and Paint & Decorating button is clicked it opens a modal with a gallery unique to each title.|Clicked the Plasterer, Tiling and Paint & Decorating buttons | A modal opened with a galley unique to each title.| ✅ |
-| Modal buttons | When the  are clicked they navigate through the gallery backwards and forwards.|Clicked the **`<`** and **`>`** buttons | Navigated through the gallery backwards and forwards.| ✅ |
+| Modal buttons | The **`<`** and **`>`** toggle the gallery backwards and forwards.|Clicked the **`<`** and **`>`** buttons | Toggled the gallery backwards and forwards.| ✅ |
 | --- | --- | --- | --- | --- |
 |**`Next steps`**|
 | Contact me button (mobile) | When the Contact me button is clicked it opens the phone app on a mobile.|Clicked the button on a mobile device 600px. | The phone app is opened| ✅ |
