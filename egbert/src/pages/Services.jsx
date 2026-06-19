@@ -49,7 +49,7 @@ const Services = () => {
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            padding: '2rem',
+            padding: 'min(2rem, 5%)',
             textAlign: 'center',
             fontSize: '1.5rem'
         }}
