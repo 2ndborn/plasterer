@@ -186,25 +186,30 @@ Save the settings.
 #### 9. Main.jsx 
 
 Add this to main.jsx:
+#### 9. Main.jsx 
+
+Add this to main.jsx:
 <div style="background:#f6f8fa; padding:1em; border-radius:6px;">
-<pre><code>
-import { Fragment, StrictMode } from 'react'
+<pre><code>import { Fragment, StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-const isDev = import.meta.env.DEV;
+<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
+<pre><code>const isDev = import.meta.env.DEV;
 const AppWrapper = isDev ? StrictMode : Fragment; 
+</code></pre>
+</div>
 
+```
 createRoot(document.getElementById('root')).render(
-  <AppWrapper>
+<AppWrapper>
     <Router>
       <App />
     </Router>
   </AppWrapper>,
 )
-</code></pre>
-</div>
+```
 
 #### 10. Access the live site
 <div style="background:#f6f8fa; padding:1em; border-radius:6px;">
