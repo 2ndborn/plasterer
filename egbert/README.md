@@ -1,6 +1,7 @@
 
 # Plasterer
 ![Repsonsiveness](../egbert/readme-assets/assets/plaster%20responsive.jpg)
+Visit the deployed site: [Plasterer](https://2ndborn.github.io/plasterer/)
 ## Mission statement
 This website is for the owner who works in the construction trade to showcase his works and attract new business.
 ## User Stories
@@ -36,7 +37,7 @@ The owner has plans to improve his skills with email. When that time comes we ca
 ## Wireframes
 | Mobile | Tablet | Desktop |
 |---|---|---|
-|Click [here](../egbert/readme-assets/assets/plaster_wireframe.webp) to view image|Click [here](../egbert/readme-assets/assets/plaster_tablet.webp)|Click [here](../egbert/readme-assets/assets/plaster_desktop.webp)|
+|Click [here](../egbert/readme-assets/assets/plaster_wireframe.webp) to view image.|Click [here](../egbert/readme-assets/assets/plaster_tablet.webp) to view image.|Click [here](../egbert/readme-assets/assets/plaster_desktop.webp) to view image.|
 ## Technologies
 ### `Resources`
 * HTML
@@ -52,7 +53,6 @@ The owner has plans to improve his skills with email. When that time comes we ca
 * [Min-Max-Value Interpolation](https://min-max-calculator.9elements.com/?16,24,320,1200)
 * [CSS Gradient Generator - W3Schools](https://www.w3schools.com/tools/tool_css_gradient.php#gsc.tab=0&gsc.q=preserve%203d)
 * [The W3C Markup Validation Service](https://validator.w3.org/)
-* [JSHint, a JavaScript Code Quality Tool](https://jshint.com/)
 * [gh-pages - npm](https://www.npmjs.com/package/gh-pages)
 ## Fixed bugs
 ## Mobile Viewport Jolt Fix (with AI Assistance)
@@ -160,21 +160,16 @@ html>
 </code></pre>
 </div>
 
-#### **6. Switch React Router to** `HashRouter`
+#### 6. Paste publish script in package.json
 
-GitHub Pages cannot handle BrowserRouter’s history API. HashRouter ensures routing works without server rewrites.
-<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
-<pre><code>import { HashRouter as Router } from "react-router-dom";</code></pre></div>
-
-<div style="background:#f6f8fa; padding:1em; border-radius:6px;"><pre><code>Router>
-	App />
-/Router></code></pre>
+<div  style="background:#f6f8fa; padding:1em; border-radius:6px;">
+	<pre><code>"publish": "npm run build && npm run deploy"</code></pre>
 </div>
 
 #### 7. Deploy the site
-<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
-<pre><code>npm run deploy
-</code></pre>
+
+<div  style="background:#f6f8fa; padding:1em; border-radius:6px;">
+	<pre><code>npm run publish</code></pre>
 </div>
 
 #### 8. Configure GitHub Pages
