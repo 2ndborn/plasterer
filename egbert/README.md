@@ -149,16 +149,15 @@ In `vite.config.js`:
 GitHub Pages does not support SPA routing. To prevent refresh/navigation 404s, add this file:
 
 `public/404.html`
-<div style="background:#f6f8fa; padding:1em; border-radius:6px;">
-<pre><code>!DOCTYPE html>
-html> 
-	head>
-	    meta http-equiv="refresh" content="0; url=/" />
-	/head>
-	body>/body>
-/html>
-</code></pre>
-</div>
+```
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="refresh" content="0; url=/" />
+	</head>
+	<body></body>
+</html>
+```
 
 #### 6. Paste publish script in package.json
 
