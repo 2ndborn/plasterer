@@ -48,8 +48,7 @@ This project was evaluated using **Google Lighthouse** to ensure strong performa
 
 | Goal | How is this achieved | Evidence |
 | --- | --- | --- |
-|I want to read a short bio about the owner so that I can learn a bit about them.
-|Users can down to the About me section to read a short bio about the owner.|![image of the owners bio](../egbert/readme-assets/assets/about_evidence.jpg)|
+|I want to read a short bio about the owner so that I can learn a bit about them.|Users can down to the About me section to read a short bio about the owner.|![image of the owners bio](../egbert/readme-assets/assets/about_evidence.jpg)|
 
 `Services`
 
