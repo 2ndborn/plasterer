@@ -73,7 +73,7 @@ This project was evaluated using **Google Lighthouse** to ensure strong performa
 
 | Goal | How is this achieved | Evidence |
 | --- | --- | --- |
-| I want the app to function across multiple devices, so that I can access and use it without restrictions regardless of the device I'm on.|Users can access the site on multiply devices.|![Homepage](../egbert/readme-assets/assets)|
+| I want the app to function across multiple devices, so that I can access and use it without restrictions regardless of the device I'm on.|Users can access the site on multiply devices.| See [here](../egbert/readme-assets/assets/plaster%20responsive.jpg) to see Am I responsive image|
 
 - - -
 
