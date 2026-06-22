@@ -55,7 +55,7 @@ This project was evaluated using **Google Lighthouse** to ensure strong performa
 | Goal | How is this achieved | Evidence |
 | --- | --- | --- |
 |I want to view a list of the services that the owner offers , so I can identify whether they provide the service I am looking for.|In the Services section users can see the owner offers a Plastering, Tiling and Paint & Decorating services.|![Image of various picture](../egbert/readme-assets/assets/services_evidence.jpg)|
-| I want to view some of the owners works, so I can verify their expertises.|Users can click a Plasterer, Tiling and Paint & Decorating buttons to view a Modal containing images of the owners work.|![image of the individual image]()|
+| I want to view some of the owners works, so I can verify their expertises.|Users can click a Plasterer, Tiling and Paint & Decorating buttons to view a Modal containing images of the owners work.|![image of the individual image](../egbert/readme-assets/assets/galleryImg.png)|
 
 `Next steps`
 

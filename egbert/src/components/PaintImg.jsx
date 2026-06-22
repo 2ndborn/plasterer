@@ -20,11 +20,14 @@ const PaintImg = () => {
             position: 'relative',
             width: '100%',
             height: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
             background: 'white',
             border: '2px solid #fff',
         }}>
-            <h1>{images[index]}</h1>
-            <button
+            <h1>Images coming soon...</h1>
+            {/* <button
                 className='unstyledBtn'
                 aria-label='Previous slide'
                 onClick={handleLeft}
@@ -49,7 +52,7 @@ const PaintImg = () => {
                 }}
             >
                 <FaChevronRight />
-            </button>
+            </button> */}
         </div>
     )
 }

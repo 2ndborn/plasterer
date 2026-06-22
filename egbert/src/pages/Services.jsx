@@ -142,8 +142,7 @@ const Services = () => {
                         {istoggled && (
                             <Overlay key={istoggled} id={String(istoggled)} onClose={handleClose}>
                                 {istoggled === 1 && (<PlasteringImg />)}
-                                {istoggled === 2 && (<TilingImg />)}
-                                {istoggled === 3 && (<PaintImg />)}
+                                {istoggled === 2 && (<PaintImg />)}
                             </Overlay>
                         )}
             // above had a bug that crash before I left the handleLeft as a prop after id moved it.

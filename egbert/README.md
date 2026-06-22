@@ -71,11 +71,24 @@ height: 100svh;
 `100svh` represents the **smallest stable viewport height**, which does not change when the browser UI collapses.  
 This prevents the hero from resizing during scroll and removes the jolt entirely.
 
-### Gallery Modal underneath one of the sections
+## Overlay Z‑Index Stacking Fix (with AI Assistance)
 
-### Overlay utility crashing the render
-### Gallery Modal underneath one of the sections
-### Overlay utility crashing the render
+The overlay modal was appearing _behind_  the `Next.jsx`  section instead of above it.  This wasn’t caused by animations or layout it was due to stacking contexts created by positioned elements lower in the page.
+
+With the help of AI debugging, the issue was traced to the overlay container missing a `z-index`.  Because the overlay used `position: fixed`  without a stacking value, it was being placed underneath other components that implicitly created higher stacking layers.
+
+### **Fix**
+
+A high `z-index`  was added to the overlay wrapper:
+
+js
+
+```
+zIndex: 9999999;
+
+```
+
+This forces the overlay to sit at the top of the stacking order, ensuring it always appears above all page content.  The modal now renders correctly, the blurred backdrop displays as intended, and all overlay interactions work reliably.
 ## TESTING
 Please click [here](../egbert/TESTING.md) to view application testing.
 ## LOCAL DEVELOPMENT

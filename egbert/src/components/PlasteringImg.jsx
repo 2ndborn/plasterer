@@ -1,18 +1,22 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import {motion} from 'framer-motion';
 import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
+import Hertford from '../assets/Hertford.jpeg';
+import plas from '../assets/plas.png';
 
 const PlasteringImg = () => {
     const [index, setIndex] = useState(0);
 
-    const array = [1, 2, 3];
+    // const array = [1, 2, 3];
+    const image = [Hertford, plas];
 
     const handleRight = () => {
-        setIndex(prev => (prev + 1) % array.length)
+        setIndex(prev => (prev + 1) % image.length)
     }
 
     const handleLeft = () => {
-        setIndex(prev => (prev - 1 + array.length) % array.length)
+        setIndex(prev => (prev - 1 + image.length) % image.length)
     }
 
     return (
@@ -23,8 +27,15 @@ const PlasteringImg = () => {
             background: 'white',
             border: '2px solid #fff',
         }}>
-            <h1>{array[index]}</h1>
-            <button
+            <img 
+            style={{
+                objectFit: 'contain', 
+                height: "100%", 
+                width: "100%"
+                }} 
+            src={image[index]} alt='image' 
+            />
+            <motion.button
                 className='unstyledBtn'
                 aria-label='Previous slide'
                 onClick={handleLeft}
@@ -32,12 +43,16 @@ const PlasteringImg = () => {
                     position: 'absolute',
                     left: 10,
                     top: '50%',
-                    paddingTop: 5
+                    padding: '7px 10px 0 7px',
+                    background: 'whitesmoke',
+                    boxShadow: '1px 1px 4px rgba(0,0,0,0.5)',
+                    borderRadius: 5
                 }}
+                whileHover={{background: 'rgb(221, 221, 221'}}
             >
                 <FaChevronLeft />
-            </button>
-            <button
+            </motion.button>
+            <motion.button
                 className='unstyledBtn'
                 aria-label='Next slide'
                 onClick={handleRight}
@@ -45,11 +60,15 @@ const PlasteringImg = () => {
                     position: 'absolute',
                     right: 10,
                     top: '50%',
-                    paddingTop: 5
+                    padding: '7px 7px 0 10px',
+                    background: 'whitesmoke',
+                    boxShadow: '-1px 1px 4px rgba(0,0,0,0.5)',
+                    borderRadius: 5
                 }}
+                whileHover={{background: 'rgb(221, 221, 221'}}
             >
                 <FaChevronRight />
-            </button>
+            </motion.button>
         </div>
     )
 }

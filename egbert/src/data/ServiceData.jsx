@@ -1,6 +1,5 @@
 import plaster from '../assets/plaster.jpg';
 import painting from '../assets/painting.webp';
-import tile from '../assets/tile.jpg';
 
 export const ServiceData = [
     { 
@@ -12,13 +11,6 @@ export const ServiceData = [
     },
     { 
         id: 2, 
-        image: tile, 
-        alt: 'Tiling room', 
-        button: 'Tiling',
-        aria: "See the Tiling gallery", 
-    },
-    { 
-        id: 3, 
         image: painting, 
         alt: 'Paint & Decorated reoom', 
         button: 'Paint & Decorating',
