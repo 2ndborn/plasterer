@@ -55,6 +55,7 @@ The owner has plans to improve his skills with email. When that time comes we ca
 * [The W3C Markup Validation Service](https://validator.w3.org/)
 * [gh-pages - npm](https://www.npmjs.com/package/gh-pages)
 ## Fixed bugs
+
 ### Mobile Viewport Jolt Fix (with AI Assistance)
 On mobile devices (Android + iOS), the hero section would “jump” when the user started scrolling.
 
@@ -71,6 +72,8 @@ height: 100svh;
 `100svh` represents the **smallest stable viewport height**, which does not change when the browser UI collapses.  
 This prevents the hero from resizing during scroll and removes the jolt entirely.
 
+---
+
 ### Overlay Z‑Index Stacking Fix (with AI Assistance)
 
 The overlay modal was appearing _behind_  the `Next.jsx`  section instead of above it.  This wasn’t caused by animations or layout it was due to stacking contexts created by positioned elements lower in the page.
@@ -81,9 +84,8 @@ With the help of AI debugging, the issue was traced to the overlay container mis
 
 A high `z-index`  was added to the overlay wrapper:
 
-js
 
-```
+```css
 zIndex: 9999999;
 
 ```
