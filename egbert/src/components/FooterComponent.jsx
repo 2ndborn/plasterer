@@ -1,4 +1,3 @@
-import React from 'react';
 import {motion} from 'framer-motion';
 import Reveal from '../utils/Reveal'
 
@@ -24,7 +23,6 @@ const FooterComponent = () => {
                     <motion.p
                     animate={{scale: [1, 1.05, 1]}}
                     transition={{duration: 2, repeat: Infinity, ease: 'easeInOut'}}
-                     style={{ fontSize: '1.5rem' }}
                     >
                         07551 085 183
                     </motion.p>
