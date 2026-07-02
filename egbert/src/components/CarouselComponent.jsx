@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { motion, useAnimation } from 'framer-motion'
 import plaster from '../assets/plaster.jpg';
+import plasterhero from '../assets/plaster_hero.webp';
 import painting from '../assets/painting.webp';
+import painthero from '../assets/paint_hero.webp';
 import tile from '../assets/tile.jpg';
 
 const CarouselComponent = () => {
-  const images = [plaster, painting, tile]
+  const images = [plasterhero, painthero]
 
   const [index, setIndex] = useState(0)
   const [prevIndex, setPrevIndex] = useState(0)
@@ -31,18 +33,18 @@ const CarouselComponent = () => {
     })
 
     // fade IN new image
-      incomingAnim.start({
-          opacity: 1,
-          filter: 'blur(0px)',
-          scale: 1,
-          transition: { duration: 1.2, ease: 'easeInOut' }
-      }).then(() => {
-          // start Ken Burns zoom AFTER fade-in
-          incomingAnim.start({
-              scale: 1.1,
-              transition: { duration: 10, ease: 'linear' }
-          })
-      })
+    incomingAnim.start({
+        opacity: 1,
+        filter: 'blur(0px)',
+        scale: 1,
+        transition: { duration: 1.2, ease: 'easeInOut' }
+    }).then(() => {
+        // start Ken Burns zoom AFTER fade-in
+        incomingAnim.start({
+            scale: 1.1,
+            transition: { duration: 10, ease: 'linear' }
+        })
+    })
 
     // fade OUT old image
     outgoingAnim.start({

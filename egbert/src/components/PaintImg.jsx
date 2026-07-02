@@ -1,19 +1,24 @@
 import { useState } from 'react';
-import { FaChevronLeft } from "react-icons/fa";
-import { FaChevronRight } from "react-icons/fa";
+import {motion} from 'framer-motion';
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const PaintImg = () => {
     const [index, setIndex] = useState(0);
 
-    const images = [7, 8, 9];
+    const image = [];
+    const hasPlaceholder = image.length <= 5;
+    const images = hasPlaceholder ? [...image, null] : image;
 
     const handleRight = () => {
-        setIndex(prev => (prev + 1) % images.length)
+        setIndex(i => Math.min(i + 1, images.length - 1))
     }
 
     const handleLeft = () => {
-        setIndex(prev => (prev - 1 + images.length) % images.length)
+        setIndex(i => Math.max(i - 1, 0))
     }
+
+    const atStart = index === 0;
+    const atEnd = index === images.length - 1;
 
     return (
         <div style={{
@@ -26,12 +31,36 @@ const PaintImg = () => {
             background: 'white',
             border: '2px solid #fff',
         }}>
-            <h1>Images coming soon...</h1>
-            {/* <button
+            {hasPlaceholder && images[index] === null ? (
+                <div
+                    style={{
+                        height: '100%',
+                        display: "flex",
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        color: '#7884a0'
+                    }}
+                >
+                    <h2>More images coming soon...</h2>
+                </div>
+            ) : (
+                <img
+                    style={{
+                        objectFit: 'contain',
+                        height: "100%",
+                        width: "100%"
+                    }}
+                    src={images[index]} alt='image'
+                />
+            )}
+            <motion.button
                 className='unstyledBtn'
                 aria-label='Previous slide'
                 onClick={handleLeft}
+                disabled={atStart}
                 style={{
+                    opacity: atStart ? 0.4 : 1,
+                    pointer: atStart ? "not-allowed" : "pointer",
                     position: 'absolute',
                     left: 10,
                     top: '50%',
@@ -39,12 +68,15 @@ const PaintImg = () => {
                 }}
             >
                 <FaChevronLeft />
-            </button>
-            <button
+            </motion.button>
+            <motion.button
                 className="unstyledBtn"
                 aria-label='Next slide'
                 onClick={handleRight}
+                disabled={atEnd}
                 style={{
+                    opacity: atEnd ? 0.4 : 1,
+                    pointer: atEnd ? "not-allowed" : "pointer",
                     position: 'absolute',
                     right: 10,
                     top: '50%',
@@ -52,7 +84,7 @@ const PaintImg = () => {
                 }}
             >
                 <FaChevronRight />
-            </button> */}
+            </motion.button>
         </div>
     )
 }

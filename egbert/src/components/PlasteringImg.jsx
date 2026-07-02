@@ -1,23 +1,34 @@
 import { useState } from 'react';
 import {motion} from 'framer-motion';
-import { FaChevronLeft } from "react-icons/fa";
-import { FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Hertford from '../assets/Hertford.jpeg';
 import plas from '../assets/plas.png';
 
 const PlasteringImg = () => {
     const [index, setIndex] = useState(0);
-
-    // const array = [1, 2, 3];
     const image = [Hertford, plas];
 
+    const hasPlaceholder = image.length <= 5;
+    // if image array has 5 images or less use null array
+    const images = hasPlaceholder ? [...image, null] : image;
+
+    // const handleRight = () => {
+    //     setIndex(prev => (prev + 1) % image.length)
+    // }
+
+    // const handleLeft = () => {
+    //     setIndex(prev => (prev - 1 + image.length) % image.length)
+    // }
+    const atStart = index === 0;
+    const atEnd = index === images.length - 1;
+
     const handleRight = () => {
-        setIndex(prev => (prev + 1) % image.length)
-    }
+        setIndex(i => Math.min(i + 1, images.length - 1));
+    };
 
     const handleLeft = () => {
-        setIndex(prev => (prev - 1 + image.length) % image.length)
-    }
+        setIndex(i => Math.max(i - 1, 0));
+    };
 
     return (
         <div style={{
@@ -27,19 +38,36 @@ const PlasteringImg = () => {
             background: 'white',
             border: '2px solid #fff',
         }}>
-            <img 
-            style={{
-                objectFit: 'contain', 
-                height: "100%", 
-                width: "100%"
-                }} 
-            src={image[index]} alt='image' 
-            />
+            {hasPlaceholder && images[index] === null ? (
+                <div
+                    style={{
+                        height: '100%',
+                        display: "flex",
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        color: '#7884a0'
+                    }}
+                >
+                    <h2>More images coming soon...</h2>
+                </div>
+            ) : (
+                <img 
+                style={{
+                    objectFit: 'contain', 
+                    height: "100%", 
+                    width: "100%"
+                    }} 
+                src={images[index]} alt='image' 
+                />
+            )}
             <motion.button
                 className='unstyledBtn'
                 aria-label='Previous slide'
                 onClick={handleLeft}
+                disabled={atStart}
                 style={{
+                    opacity: atStart ? 0.4 : 1,
+                    cursor: atStart ? "not-allowed" : "pointer",
                     position: 'absolute',
                     left: 10,
                     top: '50%',
@@ -55,8 +83,11 @@ const PlasteringImg = () => {
             <motion.button
                 className='unstyledBtn'
                 aria-label='Next slide'
+                disabled={atEnd}
                 onClick={handleRight}
                 style={{
+                    opacity: atEnd ? 0.4 : 1,
+                    cursor: atEnd ? "not-allowed" : "pointer",
                     position: 'absolute',
                     right: 10,
                     top: '50%',
