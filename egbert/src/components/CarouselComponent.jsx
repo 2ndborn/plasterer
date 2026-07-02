@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion'
-import plaster from '../assets/plaster.jpg';
 import plasterhero from '../assets/plaster_hero.webp';
-import painting from '../assets/painting.webp';
 import painthero from '../assets/paint_hero.webp';
-import tile from '../assets/tile.jpg';
 
 const CarouselComponent = () => {
-  const images = [plasterhero, painthero]
+  const images = [{
+    src: plasterhero,
+    alt: "Finished plastered coat on wall"
+  }, 
+  {
+    src: painthero,
+    alt: "Finished paint grey wall"
+  }]
 
   const [index, setIndex] = useState(0)
   const [prevIndex, setPrevIndex] = useState(0)
@@ -81,7 +85,8 @@ const CarouselComponent = () => {
       {/* Outgoing image (previous) */}
       <motion.img
         animate={outgoingAnim}
-        src={images[prevIndex]}
+        src={images[prevIndex].src}
+        alt={images[prevIndex].alt}
         style={{
           position: 'absolute',
           inset: 0,
@@ -94,7 +99,8 @@ const CarouselComponent = () => {
       {/* Incoming image (current) */}
       <motion.img
         animate={incomingAnim}
-        src={images[index]}
+        src={images[index].src}
+        alt={images[index].alt}
         style={{
           position: 'absolute',
           inset: 0,

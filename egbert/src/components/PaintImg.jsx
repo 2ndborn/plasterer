@@ -60,7 +60,7 @@ const PaintImg = () => {
                 disabled={atStart}
                 style={{
                     opacity: atStart ? 0.4 : 1,
-                    pointer: atStart ? "not-allowed" : "pointer",
+                    cursor: atStart ? "not-allowed" : "pointer",
                     position: 'absolute',
                     left: 10,
                     top: '50%',
@@ -76,7 +76,7 @@ const PaintImg = () => {
                 disabled={atEnd}
                 style={{
                     opacity: atEnd ? 0.4 : 1,
-                    pointer: atEnd ? "not-allowed" : "pointer",
+                    cursor: atEnd ? "not-allowed" : "pointer",
                     position: 'absolute',
                     right: 10,
                     top: '50%',
