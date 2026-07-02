@@ -1,6 +1,6 @@
 .HomeGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 4fr 1fr;
     place-content: center;
     width: 100%;
@@ -27,14 +27,8 @@
     grid-area: 2 / 2 / span 1 / 2;
 }
 
-.HomeGrid > div:nth-child(4) {
-    position: relative;
-    grid-area: 2 / 3 / span 1 / -1;
-}
-
 .HomeGrid > div:nth-child(2),
-.HomeGrid > div:nth-child(3),
-.HomeGrid > div:nth-child(4) {
+.HomeGrid > div:nth-child(3) {
     display: flex;
     justify-content: center;
     align-items: center;

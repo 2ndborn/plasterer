@@ -92,7 +92,7 @@ const Home = () => {
                                 style={{right: 0}}
                             />
                         </div>
-                        <div>
+                        {/* <div>
                             <motion.p
                                 variants={text}
                                 initial='hidden'
@@ -101,15 +101,15 @@ const Home = () => {
                             >
                                 Tiling
                             </motion.p>
-                        </div>
+                        </div> */}
                         <div>
-                            <motion.div
+                            {/* <motion.div
                                 initial={{ scaleY: 0 }}
                                 animate={{ scaleY: 1 }}
                                 transition={{ duration: 1, ease: 'easeInOut', delay: 3.7 }}
                                 className={styles.VerticalLine}
                                 style={{ left: 0}}
-                            />
+                            /> */}
                             <motion.p
                                 variants={text}
                                 initial='hidden'
