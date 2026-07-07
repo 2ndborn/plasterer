@@ -4,7 +4,6 @@ import styles from '../styles/Services.module.css';
 import Reveal from '../utils/Reveal';
 import Overlay from '../utils/Overlay';
 import PlasteringImg from '../components/PlasteringImg';
-import TilingImg from '../components/TilingImg';
 import PaintImg from '../components/PaintImg';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 import { ServiceData } from '../data/ServiceData';
@@ -16,7 +15,7 @@ const Services = () => {
     const [matches, setMatches] = useState(window.matchMedia('(min-width: 1025px)').matches)
 
     useEffect(() => {
-        const media = window.matchMedia('(min-width: 1025px)')
+        const media = window.matchMedia('(min-width: 1025px)');
         const handleMedia = (e) => {
             setMatches(e.matches)
             console.log(e.matches)
