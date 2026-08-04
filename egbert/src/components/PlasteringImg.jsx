@@ -3,10 +3,11 @@ import {motion} from 'framer-motion';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Hertford from '../assets/Hertford.jpeg';
 import plas from '../assets/plas.png';
+import celling from '../assets/celling.webp'
 
 const PlasteringImg = () => {
     const [index, setIndex] = useState(0);
-    const image = [Hertford, plas];
+    const image = [Hertford, plas, celling];
 
     const hasPlaceholder = image.length <= 5;
     // if image array has 5 images or less use null array
