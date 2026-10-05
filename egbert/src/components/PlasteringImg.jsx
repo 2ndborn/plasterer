@@ -4,10 +4,12 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import Hertford from '../assets/Hertford.jpeg';
 import plas from '../assets/plas.png';
 import celling from '../assets/celling.webp'
+import plasOne from '../assets/plaster_one.webp'
+import plasTwo from '../assets/plaster_two.webp'
 
 const PlasteringImg = () => {
     const [index, setIndex] = useState(0);
-    const image = [Hertford, plas, celling];
+    const image = [Hertford, plas, celling, plasOne, plasTwo];
 
     const hasPlaceholder = image.length <= 5;
     // if image array has 5 images or less use null array
